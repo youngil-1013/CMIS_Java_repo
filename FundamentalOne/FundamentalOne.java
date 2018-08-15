@@ -1,7 +1,25 @@
+import java.util.Scanner;
 public class FundamentalOne
+
 {
     public static void main (String args [])
-    {
+    {int A, B, Sum, Diff ;
+        A = 7 ;
+        B = 4 ;
+        Sum = add(A,B) ;
+        Diff = subtract(A,B) ;
+        System.out.format("%d + %d = %d\n%d - %d = %d", A, B, Sum, A, B, Diff) ;
+        Scanner Scan = new Scanner (System.in) ;
+        System.out.println("\nType in two numbers you wish to multiply") ;
+        int multA = Scan.nextInt() ;
+        int multB = Scan.nextInt() ;
+        System.out.println("\nType in the numerator of your fraction") ;
+        int Numerator = Scan.nextInt() ;
+        System.out.println("\nTypes in the denominator of your fraction") ;
+        int Denominator = Scan.nextInt() ;
+        int multResult = mult(multA,multB) ;
+        int divResult = div(Numerator,Denominator) ;
+        System.out.format("%d * %d = %d\n%d / %d = %d, multA, multB, multResult, Numerator, Denominator, divResult");
     } // end method main
 
     public static void dataTypes ()
@@ -37,19 +55,19 @@ public class FundamentalOne
         int Result = a - b ;
         return Result ;
     }
-        
+
     public static int mult(int a, int b)
     {
         int Result = a * b ;
         return Result ;
     }
-    
+
     public static int div(int numerator, int denominator)
     {
         int Result = numerator/denominator ;
         return Result ;
     }
-    
+
     public static double Dadd(double a, double b) 
     {
         double Result = a + b ;
@@ -61,17 +79,17 @@ public class FundamentalOne
         double Result = a - b ;
         return Result ;
     }
-        
+
     public static double Dmult(double a, double b)
     {
         double Result = a * b ;
         return Result ;
     }
-    
+
     public static double Ddiv(double numerator, double denominator)
     {
         double Result = numerator/denominator ;
         return Result ;
     }
-    
+
 } // end class FundamentalOne
