@@ -19,7 +19,7 @@ public class FundamentalOne
         int Denominator = Scan.nextInt() ;
         int multResult = mult(multA,multB) ;
         int divResult = div(Numerator,Denominator) ;
-        System.out.format("%d * %d = %d\n%d / %d = %d, multA, multB, multResult, Numerator, Denominator, divResult");
+        System.out.format("%d * %d = %d\n%d / %d = %d", multA, multB, multResult, Numerator, Denominator, divResult);
     } // end method main
 
     public static void dataTypes ()
@@ -91,5 +91,18 @@ public class FundamentalOne
         double Result = numerator/denominator ;
         return Result ;
     }
+
+    public static void compare(int a, int b)
+
+    {
+        if (a > b)
+        System.out.format("The value of a is %d and it is greater than b whose value is %d", a, b);
+        else if (a < b)
+        System.out.format("The value of a is %d and it is less than b whose value is %d", a, b);
+        else if (a == b)
+        System.out.format("The value of a is %d and it is equal to b whose value is %d", a, b);
+    }
+    
+    public static void evenOddZero (int whatBoi)
 
 } // end class FundamentalOne
