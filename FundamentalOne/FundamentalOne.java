@@ -19,7 +19,9 @@ public class FundamentalOne
         int Denominator = Scan.nextInt() ;
         int multResult = mult(multA,multB) ;
         int divResult = div(Numerator,Denominator) ;
-        System.out.format("%d * %d = %d\n%d / %d = %d", multA, multB, multResult, Numerator, Denominator, divResult);
+        System.out.format("%d * %d = %d\n%d / %d = %d", multA, multB, multResult, Numerator, Denominator, divResult) ;
+        compare(2,4);
+        System.out.format("%d",evenOddZero(13));
     } // end method main
 
     public static void dataTypes ()
@@ -93,16 +95,29 @@ public class FundamentalOne
     }
 
     public static void compare(int a, int b)
-
     {
         if (a > b)
-        System.out.format("The value of a is %d and it is greater than b whose value is %d", a, b);
+            System.out.format("The value of a is %d and it is greater than b whose value is %d", a, b);
         else if (a < b)
-        System.out.format("The value of a is %d and it is less than b whose value is %d", a, b);
+            System.out.format("The value of a is %d and it is less than b whose value is %d", a, b);
         else if (a == b)
-        System.out.format("The value of a is %d and it is equal to b whose value is %d", a, b);
+            System.out.format("The value of a is %d and it is equal to b whose value is %d", a, b);
     }
-    
-    public static void evenOddZero (int whatBoi)
 
+    public static int evenOddZero (int Number)
+    {
+        if (Number == 0)
+        {return 0;}
+        else if (Number % 2 == 0)
+        {return 1;}
+        else
+        {return -1;}
+    }
+
+    public static void squareTable ()
+    {
+        int initial = 1;
+        for (initial;10;+1)
+        {}
+    }
 } // end class FundamentalOne
