@@ -117,7 +117,7 @@ public class FundamentalOne
     public static void squareTable ()
     {
         int initial ;
-        for (initial = 1; initial < 10; initial++)
+        for (initial = 1; initial <= 10; initial++)
         {
             int sqr = initial*initial ;
             int rdm = (int)(Math.random()*((sqr-initial)+1))+initial;
@@ -125,12 +125,24 @@ public class FundamentalOne
         }
     }
 
-    public static int triangle (int value)
+    public static void triangle (int tri)
     {
-        for (value; value > 0; value--)
+        int Totalsum = 0 ;
+        for (int integer = tri; integer > 0; integer--)
         {
-            value = value + value-- ;
-            System.out.format("%d",value);
+            Totalsum += integer ;
         }
+        System.out.print(Totalsum);
     }
-} // end class FundamentalOne
+
+    public static void pyramid (int integer)
+    {
+        int Totalpyr = 0 ;
+        while (integer > 0)
+        {
+            Totalpyr += integer*integer;
+            integer--;
+        }
+         System.out.print(Totalpyr);
+    }
+}
