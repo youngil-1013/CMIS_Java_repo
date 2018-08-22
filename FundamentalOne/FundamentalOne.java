@@ -116,8 +116,21 @@ public class FundamentalOne
 
     public static void squareTable ()
     {
-        int initial = 1;
-        for (initial;10;+1)
-        {}
+        int initial ;
+        for (initial = 1; initial < 10; initial++)
+        {
+            int sqr = initial*initial ;
+            int rdm = (int)(Math.random()*((sqr-initial)+1))+initial;
+            System.out.format("%d\t%d\t%d\n", initial, sqr, rdm) ;
+        }
+    }
+
+    public static int triangle (int value)
+    {
+        for (value; value > 0; value--)
+        {
+            value = value + value-- ;
+            System.out.format("%d",value);
+        }
     }
 } // end class FundamentalOne
