@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class FundamentalOne
-
 {
     public static void main (String args [])
     {int A, B, Sum, Diff ;
@@ -143,6 +142,65 @@ public class FundamentalOne
             Totalpyr += integer*integer;
             integer--;
         }
-         System.out.print(Totalpyr);
+        System.out.print(Totalpyr);
+    }
+
+    public static void checkerboard (int h,int w)
+    {
+        String inbetween = "";
+        String middle = "";
+        while (w > 0)
+        {
+            inbetween += "-";
+            h--;
+        }
+        while (h > 0)
+        {
+            if (h%2 == 1)
+            {
+                while (w > 0)
+                {
+                    if (w == 0)
+                    {
+                        middle += "\n";
+                        h--;
+                    }
+                    else if (w%2 == 1)
+                    {
+                        middle += "#";
+                        w--;
+                    }
+                    else if (w%2 == 0)
+                    {
+                        middle += " ";
+                        w--;
+                    }
+                }
+            }
+            if (h%2 == 0)
+            {
+                while (w > 0)
+                {
+                    if (w == 0)
+                    {
+                        middle += "\n";
+                        h--;
+                    }
+                    else if (w%2 == 1)
+                    {
+                        middle += "#";
+                        w--;
+                    }
+                    else if (w%2 == 0)
+                    {
+                        middle += " ";
+                        w--;
+                    }
+                }
+            }
+            String border = "+" + inbetween + "+";
+            System.out.println(border);
+            System.out.println(middle);
+        }
     }
 }
