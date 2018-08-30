@@ -8,69 +8,42 @@ public class checkerboard {
         }
         topBottomBorder += "+";//End of building top and bottom lines
         String middlePart = "";
-        while (height > 0)
+        int hRdm = (int)(Math.random()*(height + 1));
+        int wRdm = (int)(Math.random()*(width + 1));
+        int Rdm = (int)(Math.random()*(10));
+        for (int h = height; h > 0; h--)
         {
-            int w = width;
-            if (height%2 ==1)
+            if (h%2 == 1)
             {
-                while(w >= 0)
+                middlePart += "|";
+                for (int w = width; w > 0; w--)
                 {
-                    if (w == width)
-                    {
-                        middlePart += "|#";
-                        w--;
-                    }
-                    else if (w == 0)
-                    {
-                        middlePart += "|";
-                        w--;
-                    }
-
+                    if (w%2 ==1 && w == hRdm && h ==hRdm)
+                        middlePart += String.format("%d",Rdm);
                     else if (w%2 == 1)
-                    {
                         middlePart += "#";
-                        w--;
-                    }
                     else if (w%2 == 0)
-                    {
                         middlePart += " ";
-                        w--;
-                    }
                 }
-                middlePart += "\n";
+                middlePart += "|\n";
             }
-            
-            else if (height%2 ==1)
+            if (h%2 == 0)
             {
-                while(w >= 0)
+                middlePart += "|";
+                for (int w = width; w > 0; w--)
                 {
-                    if (w == width)
-                    {
-                        middlePart += "|#";
-                        w--;
-                    }
-                    else if (w == 0)
-                    {
-                        middlePart += "|";
-                        w--;
-                    }
-
-                    else if (w%2 == 0)
-                    {
+                    if (w%2 == 0 && w == hRdm && h ==hRdm)
+                        middlePart += String.format("%d",Rdm);
+                    if (w%2 == 0)
                         middlePart += "#";
-                        w--;
-                    }
                     else if (w%2 == 1)
-                    {
                         middlePart += " ";
-                        w--;
-                    }
                 }
-                middlePart += "\n";
+                middlePart += "|\n";
             }
-            height--;
-
         }
+        System.out.println(topBottomBorder);
         System.out.print(middlePart);
+        System.out.println(topBottomBorder);
     }
 }
