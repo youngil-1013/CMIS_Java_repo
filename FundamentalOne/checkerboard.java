@@ -8,8 +8,10 @@ public class checkerboard {
         }
         topBottomBorder += "+";//End of building top and bottom lines
         String middlePart = "";
-        int hRdm = (int)(Math.random()*(height + 1));
-        int wRdm = (int)(Math.random()*(width + 1));
+        int hRdm=(int) (Math.random()*(height / 2));
+        hRdm = hRdm * 2 + 1;
+        int wRdm = (int)(Math.random()*(width / 2));
+        wRdm = wRdm * 2 + 1;
         int Rdm = (int)(Math.random()*(10));
         for (int h = height; h > 0; h--)
         {

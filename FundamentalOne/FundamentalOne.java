@@ -139,7 +139,7 @@ public class FundamentalOne
         int Totalpyr = 0 ;
         while (integer > 0)
         {
-            Totalpyr += integer*integer;
+            Totalpyr += java.lang.Math.pow(integer,2);
             integer--;
         }
         System.out.print(Totalpyr);
