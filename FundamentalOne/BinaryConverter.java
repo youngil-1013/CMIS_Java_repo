@@ -10,17 +10,23 @@ public class BinaryConverter
 
     public static String dec2bin(int dec){
         String binResult = "";
-        for (int posit = 31; posit >= 0; posit--)
+        if (dec >= 0)
         {
-            if (java.lang.Math.pow(2,posit) - dec >= 0)
+            for (int posit = 31; posit >= 0; posit--)
             {
-                binResult += "0";
-            }
-            else if (java.lang.Math.pow(2,posit) - dec < 0)
-            {
-                binResult += "1";
+                if (dec - java.lang.Math.pow (2,posit) >= 0)
+                {
+                    binResult += "1";
+                    dec = dec - (int)java.lang.Math.pow (2,posit);
+                }   
+                else if (dec - java.lang.Math.pow (2,posit) < 0)
+                {
+                    binResult += "0";
+                }
             }
         }
+        else if (dec < 0)
+
         System.out.println (binResult);
         return (binResult);
     }
