@@ -4,6 +4,4 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=dec
 comment2.target=java.lang.String\ dec2bin(int)
-comment3.params=bin
-comment3.target=int\ bin2dec(java.lang.String)
-numComments=4
+numComments=3

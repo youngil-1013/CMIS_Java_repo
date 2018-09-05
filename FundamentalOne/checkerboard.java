@@ -13,12 +13,12 @@ public class checkerboard {
         int wRdm = (int)(Math.random()*(width / 2));
         wRdm = wRdm * 2 + 1;
         int Rdm = (int)(Math.random()*(10));
-        for (int h = height; h > 0; h--)
+        for (int h = 0; h < height; h++)
         {
             if (h%2 == 1)
             {
                 middlePart += "|";
-                for (int w = width; w > 0; w--)
+                for (int w = 0; w < width; w++)
                 {
                     if (w%2 ==1 && w == hRdm && h ==hRdm)
                         middlePart += String.format("%d",Rdm);
@@ -32,7 +32,8 @@ public class checkerboard {
             if (h%2 == 0)
             {
                 middlePart += "|";
-                for (int w = width; w > 0; w--)
+
+                for (int w = 0; w < width; w++)
                 {
                     if (w%2 == 0 && w == hRdm && h ==hRdm)
                         middlePart += String.format("%d",Rdm);
