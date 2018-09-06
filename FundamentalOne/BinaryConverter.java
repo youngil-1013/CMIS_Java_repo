@@ -8,6 +8,26 @@ public class BinaryConverter
         dec2bin(Integer);
     }
 
+    public static String AddOne(String example)
+    {
+        String back = "";
+        String front = "";
+        boolean TF = true;
+        for (int n = example.length(); TF; n--)
+        {    
+            if (example.substring(n - 1, n).equals("1"))
+            {
+                back += "0";
+            }
+            else if (example.substring(n - 1, n).equals("0"))
+            {
+                front += example.substring(0, n-1) + "1";
+                TF = false;
+            }
+        }
+        String result = front + back;
+        return result;
+    }
     public static String dec2bin(int dec){
         String binResult = "";
         String negResult = "";
@@ -54,7 +74,8 @@ public class BinaryConverter
             }
             binResult = negResult;
         }
-        return binResult;
+        String Final = AddOne(negResult);
+        return Final;
     }
 }
 

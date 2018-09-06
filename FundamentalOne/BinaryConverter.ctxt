@@ -2,6 +2,8 @@
 comment0.target=BinaryConverter
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=dec
-comment2.target=java.lang.String\ dec2bin(int)
-numComments=3
+comment2.params=example
+comment2.target=java.lang.String\ AddOne(java.lang.String)
+comment3.params=dec
+comment3.target=java.lang.String\ dec2bin(int)
+numComments=4
