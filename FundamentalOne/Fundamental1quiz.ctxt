@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Fundamental1quiz
+comment1.params=a\ b\ c
+comment1.target=int\ method1(int,\ int,\ int)
+comment2.params=a\ b
+comment2.target=int\ method2(int,\ int)
+comment3.params=h\ w
+comment3.target=java.lang.String\ method3(int,\ int)
+numComments=4
