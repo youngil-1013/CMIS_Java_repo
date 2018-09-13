@@ -4,8 +4,9 @@ public class BinaryConverter
     public static void main(String args[]){
         System.out.println("BinaryConverter");
         Scanner Scan = new Scanner (System.in) ;
-        int Integer = Scan.nextInt() ;
-        dec2bin(Integer);
+        int Integer = Scan.nextInt();
+        System.out.print(dec2bin(Integer));
+
     }
 
     public static String AddOne(String example)
@@ -28,6 +29,7 @@ public class BinaryConverter
         String result = front + back;
         return result;
     }
+    
     public static String dec2bin(int dec){
         String binResult = "";
         String negResult = "";
@@ -77,12 +79,10 @@ public class BinaryConverter
         String Final = AddOne(negResult);
         return Final;
     }
+    
+    public static int bin2dec(String bin)
+    {
+        return 0;
+    }
 }
-
-//public static int bin2dec(String bin){
-/*
- * Takes a String that looks like a 32-bit binary number and returns
- * the equivalent int value
- */
-//return 0;
 

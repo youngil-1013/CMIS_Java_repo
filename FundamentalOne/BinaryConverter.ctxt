@@ -6,4 +6,6 @@ comment2.params=example
 comment2.target=java.lang.String\ AddOne(java.lang.String)
 comment3.params=dec
 comment3.target=java.lang.String\ dec2bin(int)
-numComments=4
+comment4.params=bin
+comment4.target=int\ bin2dec(java.lang.String)
+numComments=5
