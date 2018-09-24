@@ -24,7 +24,7 @@ public class FundamentalTwo
             }
     }
 
-    public static void printArray(Double arrayDou[], boolean skip)
+    public static void printArray(double arrayDou[], boolean skip)
     {
         if (skip == true)
         {
@@ -56,4 +56,69 @@ public class FundamentalTwo
             }
     }
 
+    public static void printArray(boolean arrayBool[], boolean skip)
+    {
+        if (skip == true)
+        {
+            for (int place = 0; place < arrayBool.length; place += 2)
+            {
+                System.out.format("%b\n",arrayBool[place]);
+            }
+        }
+        else 
+            for (int place = 0; place < arrayBool.length; place++)
+            {
+                System.out.format("%b\n",arrayBool[place]);
+            }
+    }
+
+    public static int lastItem(int array[])
+    {
+        return (array[array.length - 1]);
+    }
+
+    public static double lastItem(double array[])
+    {
+        return (array[array.length - 1]);
+    }
+
+    public static String lastItem(String array[])
+    {
+        return (array[array.length - 1]);
+    }
+
+    public static boolean lastItem(boolean array[])
+    {
+        return (array[array.length - 1]);
+    }
+
+    public static int middleItem(int array[])
+    {
+        return (array[(int)((array.length - 1) / 2)]);
+    }
+
+    public static double middleItem(double array[])
+    {
+        return (array[(int)((array.length - 1) / 2)]);
+    }
+
+    public static String middleItem(String array[])
+    {
+        return (array[(int)((array.length - 1) / 2)]);
+    }
+
+    public static boolean middleItem(boolean array[])
+    {
+        return (array[(int)((array.length - 1) / 2)]);
+    }
+
+    public static int[] randomInts(int n, int min, int max)
+    {
+        int result[] = new int[n];
+        for (int length = 0; length < n; length++)
+            result[length] = (int) (Math.random() * (max - min + 1) + min);
+        return result;
+    }
+
+    //   public static 
 }
