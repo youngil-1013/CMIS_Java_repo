@@ -8,7 +8,7 @@ public class FundamentalTwo
         System.out.format("first integer is: %d\nthird double is: %g\nfifth string is: %s", arrayInt[0], arrayDoub[2], arrayStr[4]);
     }
 
-    public static void printArray(int arrayInt[], boolean skip)
+    public static void printArray(int[] arrayInt, boolean skip)
     {
         if (skip == true)
         {
@@ -24,7 +24,7 @@ public class FundamentalTwo
             }
     }
 
-    public static void printArray(double arrayDou[], boolean skip)
+    public static void printArray(double[] arrayDou, boolean skip)
     {
         if (skip == true)
         {
@@ -40,7 +40,7 @@ public class FundamentalTwo
             }
     }
 
-    public static void printArray(String arrayStr[], boolean skip)
+    public static void printArray(String[] arrayStr, boolean skip)
     {
         if (skip == true)
         {
@@ -56,7 +56,7 @@ public class FundamentalTwo
             }
     }
 
-    public static void printArray(boolean arrayBool[], boolean skip)
+    public static void printArray(boolean[] arrayBool, boolean skip)
     {
         if (skip == true)
         {
@@ -114,11 +114,51 @@ public class FundamentalTwo
 
     public static int[] randomInts(int n, int min, int max)
     {
-        int result[] = new int[n];
+        int[] result = new int[n];
         for (int length = 0; length < n; length++)
             result[length] = (int) (Math.random() * (max - min + 1) + min);
         return result;
     }
 
+    public static double[] randomDoubles(int n, double min, double max)
+    {
+        double[] result = new double[n];
+        for (int length = 0; length < n; length++)
+        {
+            result[length] = (Math.random() * (max - min) + min);
+        }
+        return result;
+    }
+
+    public static int[] copy(int[] array)
+    {
+        int[] copied = new int[array.length];
+        for (int length = 0; length < array.length; length++)
+        {
+            copied[length] = array[length];
+        }
+        return copied;
+    }
+
+    public static int[] pairs(int n)
+    {
+        int[] pairs = new int[n * 2];
+        int position = 1;
+        for (int length = 0; length < pairs.length; length += 2)
+        {
+            pairs[length] = (position) * 2;
+            pairs[length + 1] = (position) * 2;
+            position ++;
+        }
+        return pairs;
+    }
+    
+    public static int[] concat(int[] a, int[] b)
+    {
+        int[] result = new int[a.length + b.length];
+        
+        return null;
+    }
     //   public static 
+
 }
