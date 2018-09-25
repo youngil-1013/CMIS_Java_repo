@@ -140,6 +140,36 @@ public class FundamentalTwo
         return copied;
     }
 
+    public static boolean[] copy(boolean[] array)
+    {
+        boolean[] copied = new boolean[array.length];
+        for (int length = 0; length < array.length; length++)
+        {
+            copied[length] = array[length];
+        }
+        return copied;
+    }
+
+    public static String[] copy(String[] array)
+    {
+        String[] copied = new String[array.length];
+        for (int length = 0; length < array.length; length++)
+        {
+            copied[length] = array[length];
+        }
+        return copied;
+    }
+
+    public static double[] copy(double[] array)
+    {
+        double[] copied = new double[array.length];
+        for (int length = 0; length < array.length; length++)
+        {
+            copied[length] = array[length];
+        }
+        return copied;
+    }
+
     public static int[] pairs(int n)
     {
         int[] pairs = new int[n * 2];
@@ -152,11 +182,24 @@ public class FundamentalTwo
         }
         return pairs;
     }
-    
+
     public static int[] concat(int[] a, int[] b)
     {
         int[] result = new int[a.length + b.length];
-        
+        for (int length = 0; length < a.length; length++)
+        {
+            result[length] = a[length];
+        }
+        for (int length = a.length; length < a.length + b.length; length++)
+        {
+            result[length] = b[length - a.length];
+        }
+        return result;
+    }
+    
+    public static int[] merge(int[] a, int[] b)
+    {
+        int place = 0;
         return null;
     }
     //   public static 
