@@ -196,12 +196,45 @@ public class FundamentalTwo
         }
         return result;
     }
-    
+
     public static int[] merge(int[] a, int[] b)
     {
         int place = 0;
-        return null;
+        int aPlace = 0;
+        int bPlace = 0;
+        int resultLength = a.length + b.length;
+        int[] result = new int[resultLength];
+        for (int aPosit = 0; aPosit < resultLength/2; aPosit ++)
+        {
+            result[aPosit * 2] = a[aPlace];
+            aPlace ++;
+        }
+        for (int bPosit = 0; bPosit < resultLength; bPosit ++)
+        {
+            result[(bPosit * 2) + 1] = b[bPlace];
+            bPlace ++;
+        }
+        return result;
     }
-    //   public static 
+
+    public static void reverse(int[] array)
+    {
+        for(int posit = 0; posit < (array.length / 2); posit ++)
+        {
+            int left = array[array.length - (posit + 1)];
+            array[array.length - (posit + 1)] = array[posit];
+            array[posit] = left;
+        }
+        printArray(array,false);
+    }
+
+    public static int[] subArray(int[] array, int start, int stop)
+    {
+        int [] result = new int [stop - start];
+        for (int posit = start; posit < stop; posit ++)
+        {
+            result []
+        }
+    }
 
 }
