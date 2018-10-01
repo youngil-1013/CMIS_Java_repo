@@ -204,15 +204,31 @@ public class FundamentalTwo
         int bPlace = 0;
         int resultLength = a.length + b.length;
         int[] result = new int[resultLength];
-        for (int aPosit = 0; aPosit < resultLength/2; aPosit ++)
+        if (a.length > b.length)
         {
-            result[aPosit * 2] = a[aPlace];
-            aPlace ++;
+            for (int aPosit = 0; aPosit < resultLength; aPosit ++)
+            {
+                result[aPosit * 2] = a[aPlace];
+                aPlace ++;
+            }
+            for (int bPosit = 0; bPosit < b.length * 2; bPosit ++)
+            {
+                result[(bPosit * 2) + 1] = b[bPlace];
+                bPlace ++;
+            }
         }
-        for (int bPosit = 0; bPosit < resultLength; bPosit ++)
+        else
         {
-            result[(bPosit * 2) + 1] = b[bPlace];
-            bPlace ++;
+            for (int aPosit = 0; aPosit < a.length * 2; aPosit ++)
+            {
+                result[aPosit * 2] = a[aPlace];
+                aPlace ++;
+            }
+            for (int bPosit = 0; bPosit < resultLength; bPosit ++)
+            {
+                result[(bPosit * 2) + 1] = b[bPlace];
+                bPlace ++;
+            }
         }
         return result;
     }
@@ -320,6 +336,55 @@ public class FundamentalTwo
     //16
     public static double[] maxMerge(double[] a, double[] b)
     {
-        return null;
+        int scoreA = 0;
+        int scoreB = 0;
+        int compareLength = 0;
+        double newA [];
+        double newB [];
+        if (a.length == b.length)
+        {
+            compareLength = a.length;
+            newA = a;
+            newB = b;
+        }
+        else if (a.length > b.length)
+        {
+            compareLength = a.length;
+            newB = new double [compareLength];
+            for (int length = 0; length < b.length; length ++)
+            {
+                newB [length] = b [length];
+            }
+            newA = a;
+        }
+        else
+        {
+            compareLength = b.length;
+            newA = new double [compareLength];
+            for (int length = 0; length < b.length; length ++)
+            {
+                newA [length] = a [length];
+            }
+            newB = b;
+        }
+
+        for (int posit = 0; posit < compareLength; posit ++)
+        {
+            if (newA [posit] > newB [posit])
+            {
+                scoreA ++;
+            }   
+            else
+            {
+                scoreB ++;
+            }
+        }
+
+        if (scoreA > scoreB)
+            return a;
+        else if (scoreB > scoreA)
+            return b;
+        else
+            return null;
     }
 }
