@@ -199,43 +199,41 @@ public class FundamentalTwo
 
     public static int[] merge(int[] a, int[] b)
     {
-        int place = 0;
-        int aPlace = 0;
-        int bPlace = 0;
-        int resultLength = a.length + b.length;
-        int[] result = new int[resultLength];
-        if (a.length > b.length)
+        int [] result = new int [a.length + b.length];
+        int aPosit = 0;
+        int bPosit = 0;
+        int mid;
+        if (a.length <= b.length)
+            mid = a.length;
+        else 
+            mid = b.length;
+        for (int resultPosit = 0; resultPosit < mid * 2; resultPosit += 2)
         {
-            for (int aPosit = 0; aPosit < resultLength; aPosit ++)
-            {
-                result[aPosit * 2] = a[aPlace];
-                aPlace ++;
-            }
-            for (int bPosit = 0; bPosit < b.length * 2; bPosit ++)
-            {
-                result[(bPosit * 2) + 1] = b[bPlace];
-                bPlace ++;
-            }
+            result [resultPosit] = a [aPosit];
+            result [resultPosit + 1] = b [bPosit];
+            aPosit ++;
+            bPosit ++;
         }
+        int jay = mid * 2;
+        if (a.length <= b.length)
+            for (int bP = mid; bP < b.length; bP ++)
+            {
+                result [jay] = b[bP];
+                jay ++;
+            }
         else
-        {
-            for (int aPosit = 0; aPosit < a.length * 2; aPosit ++)
+            for (int aP = mid; aP < a.length; aP ++)
             {
-                result[aPosit * 2] = a[aPlace];
-                aPlace ++;
+                result [jay] = a[aP];
+                jay ++;
             }
-            for (int bPosit = 0; bPosit < resultLength; bPosit ++)
-            {
-                result[(bPosit * 2) + 1] = b[bPlace];
-                bPlace ++;
-            }
-        }
+
         return result;
     }
 
     public static void reverse(int[] array)
     {
-        for(int posit = 0; posit < (array.length / 2); posit ++)
+        for (int posit = 0; posit < (array.length / 2); posit ++)
         {
             int left = array[array.length - (posit + 1)];
             array[array.length - (posit + 1)] = array[posit];
@@ -339,8 +337,8 @@ public class FundamentalTwo
         int scoreA = 0;
         int scoreB = 0;
         int compareLength = 0;
-        double newA [];
-        double newB [];
+        double [] newA;
+        double [] newB;
         if (a.length == b.length)
         {
             compareLength = a.length;
@@ -351,7 +349,7 @@ public class FundamentalTwo
         {
             compareLength = a.length;
             newB = new double [compareLength];
-            for (int length = 0; length < b.length; length ++)
+            for (int length = 0; length < b.length - 1; length ++)
             {
                 newB [length] = b [length];
             }
@@ -361,30 +359,18 @@ public class FundamentalTwo
         {
             compareLength = b.length;
             newA = new double [compareLength];
-            for (int length = 0; length < b.length; length ++)
+            for (int length = 0; length < a.length - 1; length ++)
             {
                 newA [length] = a [length];
             }
             newB = b;
         }
-
-        for (int posit = 0; posit < compareLength; posit ++)
-        {
-            if (newA [posit] > newB [posit])
-            {
-                scoreA ++;
-            }   
+        double [] result = new double [compareLength];
+        for (int resultP = 0; resultP < compareLength - 1; resultP ++)
+            if (a [resultP] < b [resultP])
+                result [resultP] = newB [resultP];
             else
-            {
-                scoreB ++;
-            }
-        }
-
-        if (scoreA > scoreB)
-            return a;
-        else if (scoreB > scoreA)
-            return b;
-        else
-            return null;
+                result [resultP] = newA [resultP];
+        return result;
     }
 }
