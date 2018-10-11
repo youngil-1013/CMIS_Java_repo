@@ -21,30 +21,32 @@ public class Youngil extends Robot
      * isClearUp() => true means no block up
      * isClearDown() => true means no block down
      */
-    public void behave(){
-        String where;
-        int time = 0;
-        while (isClearRight() == false)
+    public void behave()
+    {
+        boolean upAndDown = false;
+
         {
-            if (time == 0)
+            if (isClearRight() == true)
+                right();
+            if (upAndDown == false && isClearRight() == false)
             {
-                if (isClearUp() == false)
-                {
-                    down();
-                    where = "down";
-                }
-                else if (isClearDown() == false)
+                if (isClearUp() == true)
                 {
                     up();
-                    where = "up";
                 }
-                else if (isClearUp() == false && isClearDown() == false)
+                if (isClearDown() == true)
                 {
-                    left();
-                    where = "left";
+                    down();
                 }
+                if (isClearDown() == false && isClearUp() == false)
+                    upAndDown = true;
+            }
+            if (upAndDown == true)
+            {
+                left();
+                if (isClearDown() == true || isClearUp() == true)
+                    upAndDown = false;
             }
         }
-        right();
     }
 }
