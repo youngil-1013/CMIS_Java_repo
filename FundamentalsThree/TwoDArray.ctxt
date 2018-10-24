@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TwoDArray
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=h\ w
+comment2.target=int[][]\ defaultArray(int,\ int)
+numComments=3
