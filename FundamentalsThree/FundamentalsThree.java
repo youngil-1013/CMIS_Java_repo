@@ -105,7 +105,7 @@ public class FundamentalsThree
         }
         return result;
     } // end of 7
-    
+
     public static int[][] replace(int[][] array, int threshold, int newValue)
     {
         int [][] result = new int [array.length][array[0].length];
@@ -114,16 +114,88 @@ public class FundamentalsThree
             for (int x = 0; x < array[y].length; x ++)
             {
                 if (array [y][x] <= threshold)
-                result [y][x] = array [y][x];
+                    result [y][x] = array [y][x];
                 else 
-                result [y][x] = newValue;
+                    result [y][x] = newValue;
             }
         }
         return result;
     } // end of 8
-    
+
     public static double[][] shift(double[][] arr, int row)
     {
-        return null;
-    }
+        double result [][] = new double [arr.length][arr[0].length];
+        for (int y = 0; y < arr.length; y ++)
+        {
+            if (y > row)
+            {
+                result[y] = arr[y - 1];
+            }
+            else if (y == row)
+            {
+                for (int x = 0; x < arr[0].length; x ++)
+                {
+                    result[y][x] = Math.random() * 10;
+                }
+            }
+            else
+            {
+                result[y] = arr[y];
+            }
+        }
+        return result;
+    } // end of 9
+
+    public static double [][] tilt (double [][] arr)
+    {
+        double [][] result = new double [arr[0].length][arr.length];
+        for (int y = 0; y < arr.length; y ++)
+        {
+            for (int x = 0; x < arr[0].length; x ++)
+            {
+                result[x][y] = arr[y][x];
+            }
+        }
+        return result;
+    } // end of 10
+
+    public static void greatest (int [][] arr, boolean greatestRow)
+    {
+        int resultSum = 0;
+        int result = 0;
+        if (greatestRow)
+        {
+            for (int y = 0; y < arr.length; y ++)
+            {
+                int check = 0;
+                for (int x = 0; x < arr[0].length; x ++)
+                {
+                    check += arr[y][x];
+                }
+                if (check > resultSum)
+                {
+                    result = y;
+                    resultSum = check;
+                }
+            }
+            System.out.format("Row %d has the greatest sum, %d.",result, resultSum);
+        }
+        else
+        {
+            for (int x = 0; x < arr.length; x ++)
+            {
+                int check = 0;
+                for (int y = 0; y < arr[0].length; y ++)
+                {
+                    check += arr[y][x];
+                }
+                if (check > resultSum)
+                {
+                    result = x;
+                    resultSum = check;
+                }
+            }            
+            System.out.format("Column %d has the greatest sum, %d.",result, resultSum);
+        }
+    } // end of 11
 }
