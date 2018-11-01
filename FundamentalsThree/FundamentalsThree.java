@@ -178,7 +178,7 @@ public class FundamentalsThree
                     resultSum = check;
                 }
             }
-            System.out.format("Row %d has the greatest sum, %d.",result, resultSum);
+            System.out.format("Row %d has the greatest sum, %d.",result + 1, resultSum);
         }
         else
         {
@@ -195,7 +195,22 @@ public class FundamentalsThree
                     resultSum = check;
                 }
             }            
-            System.out.format("Column %d has the greatest sum, %d.",result, resultSum);
+            System.out.format("Column %d has the greatest sum, %d.",result + 1, resultSum);
         }
     } // end of 11
+
+    public static void greatestSub (int [][] arr, int h, int w)
+    {
+        int result = 0;
+
+        for (int wPost = w - 1; wPost < arr[0].length; wPost ++)
+        {
+            int temp = 0;
+            for (int wCheck = 0; wCheck < w; wCheck ++)
+            {
+                temp += arr [h][wPost - wCheck];
+            }
+            System.out.format("%d\n",temp);
+        }
+    }
 }
