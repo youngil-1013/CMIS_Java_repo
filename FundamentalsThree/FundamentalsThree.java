@@ -7,6 +7,8 @@ public class FundamentalsThree
         int [][] literalIntArray = {{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}, {16,17,18,19,20}, {21,22,23,24,25}};
         double [][] defaultDoubleArray = new double [5][5];
         double [][] literalDoubleArray = {{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}, {16,17,18,19,20}, {21,22,23,24,25}};
+        int [][] Array = {{1,2,3},{4,5,6},{7,8,9}};
+        greatestSub (Array, 2, 2);
     }
 
     public static int returnValue (int [][] intArray, int y, int x)
@@ -201,16 +203,22 @@ public class FundamentalsThree
 
     public static void greatestSub (int [][] arr, int h, int w)
     {
-        int result = 0;
-
-        for (int wPost = w - 1; wPost < arr[0].length; wPost ++)
+        System.out.println("D");
+        for (int hPosition = 0; hPosition < arr.length - 1; hPosition ++)
         {
-            int temp = 0;
-            for (int wCheck = 0; wCheck < w; wCheck ++)
+            for (int hCurrentLength = 0; hCurrentLength < h; hCurrentLength ++)
             {
-                temp += arr [h][wPost - wCheck];
+                for (int wPosition = 0; wPosition < arr[0].length - 1; wPosition ++)
+                {
+                    int temporarySum = 0;
+                    for (int wCurrentLength = 0; wCurrentLength < w; wCurrentLength ++)
+                    {
+                        temporarySum += arr[hPosition + hCurrentLength][wPosition + wCurrentLength];
+                    }
+                    System.out.format("%d\n",temporarySum);
+                }
             }
-            System.out.format("%d\n",temp);
         }
     }
 }
+
