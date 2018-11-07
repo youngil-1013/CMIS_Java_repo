@@ -8,7 +8,7 @@ public class FundamentalsThree
         double [][] defaultDoubleArray = new double [5][5];
         double [][] literalDoubleArray = {{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}, {16,17,18,19,20}, {21,22,23,24,25}};
         int [][] Array = {{1,2,3},{4,5,6},{7,8,9}};
-        greatestSub (Array, 2, 2);
+        greatestSub (Array, 3, 2);
     }
 
     public static int returnValue (int [][] intArray, int y, int x)
@@ -203,20 +203,21 @@ public class FundamentalsThree
 
     public static void greatestSub (int [][] arr, int h, int w)
     {
-        System.out.println("D");
         for (int hPosition = 0; hPosition < arr.length - 1; hPosition ++)
         {
-            for (int hCurrentLength = 0; hCurrentLength < h; hCurrentLength ++)
-            {
-                for (int wPosition = 0; wPosition < arr[0].length - 1; wPosition ++)
+            for (int wPosition = 0; wPosition < arr[0].length - 1; wPosition ++)
+            {   
+                int temporarySum = 0;
+                for (int hCurrentLength = 0; hCurrentLength < h; hCurrentLength ++)
                 {
-                    int temporarySum = 0;
-                    for (int wCurrentLength = 0; wCurrentLength < w; wCurrentLength ++)
-                    {
-                        temporarySum += arr[hPosition + hCurrentLength][wPosition + wCurrentLength];
-                    }
-                    System.out.format("%d\n",temporarySum);
+                    if (hPosition < arr.length && wPosition < arr[0].length)
+                        for (int wCurrentLength = 0; wCurrentLength < w; wCurrentLength ++)
+                        {
+                            if (hPosition + hCurrentLength < arr.length && wPosition + wCurrentLength < arr[0].length)
+                                temporarySum += arr[hPosition + hCurrentLength][wPosition + wCurrentLength];
+                        }
                 }
+                System.out.format("%d\n",temporarySum);
             }
         }
     }
