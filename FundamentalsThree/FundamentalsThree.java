@@ -201,8 +201,9 @@ public class FundamentalsThree
         }
     } // end of 11
 
-    public static void greatestSub (int [][] arr, int h, int w)
+    public static int greatestSub (int [][] arr, int h, int w)
     {
+        int result = 0;
         for (int hPosition = 0; hPosition < arr.length - 1; hPosition ++)
         {
             for (int wPosition = 0; wPosition < arr[0].length - 1; wPosition ++)
@@ -210,14 +211,32 @@ public class FundamentalsThree
                 int temporarySum = 0;
                 for (int hCurrentLength = 0; hCurrentLength < h; hCurrentLength ++)
                 {
-                    if (hPosition < arr.length && wPosition < arr[0].length)
-                        for (int wCurrentLength = 0; wCurrentLength < w; wCurrentLength ++)
+                    for (int wCurrentLength = 0; wCurrentLength < w; wCurrentLength ++)
+                    {
+                        if (hPosition + hCurrentLength < arr.length && wPosition + wCurrentLength < arr[0].length)
                         {
-                            if (hPosition + hCurrentLength < arr.length && wPosition + wCurrentLength < arr[0].length)
-                                temporarySum += arr[hPosition + hCurrentLength][wPosition + wCurrentLength];
+                            temporarySum += arr[hPosition + hCurrentLength][wPosition + wCurrentLength];
+                            if (temporarySum > result)
+                                result = temporarySum;
                         }
+                    }
                 }
-                System.out.format("%d\n",temporarySum);
+            }
+        }
+        return result;
+    } // end of 12
+    
+    public static int greatestRing (int [][] arr)
+    {
+        int result = 0;
+        for (int hEdge = 0; hEdge < arr.length - 1; hEdge ++)
+        {
+            for (int wEdge = 0; wEdge < arr[0].length - 1; wEdge ++)
+            {
+                for (int hPost = hEdge; hPost < arr.length - hEdge; hPost ++)
+                {
+                    if (hPost = hEdge || hPost = arr.length - (1 + hEdge))
+                }
             }
         }
     }
