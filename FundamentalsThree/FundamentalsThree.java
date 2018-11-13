@@ -225,20 +225,31 @@ public class FundamentalsThree
         }
         return result;
     } // end of 12
-    
+
     public static int greatestRing (int [][] arr)
     {
         int result = 0;
-        for (int hEdge = 0; hEdge < arr.length - 1; hEdge ++)
+        for (int posit = 0; posit < (arr.length + 1)/2; posit ++)
         {
-            for (int wEdge = 0; wEdge < arr[0].length - 1; wEdge ++)
+            int temp = 0;
+            for (int h = posit; h < arr.length; h++)
             {
-                for (int hPost = hEdge; hPost < arr.length - hEdge; hPost ++)
+                if (h == posit || h == arr.length - (1 + posit))
                 {
-                    if (hPost = hEdge || hPost = arr.length - (1 + hEdge))
+                    for (int w = posit; w < arr[0].length - posit; w ++)
+                    {
+                        temp += arr[h][w];
+                    }
+                }
+
+                else if (posit != arr[0].length - (1 + posit))
+                {
+                    temp += arr[h][posit];
+                    temp += arr[h][arr[0].length - (1 + posit)];
                 }
             }
+            System.out.println(temp);
         }
+        return 0;
     }
 }
-
