@@ -229,10 +229,10 @@ public class FundamentalsThree
     public static int greatestRing (int [][] arr)
     {
         int result = 0;
-        for (int posit = 0; posit < (arr.length + 1)/2; posit ++)
+        for (int posit = 0; posit <= arr.length/2; posit ++)
         {
             int temp = 0;
-            for (int h = posit; h < arr.length; h++)
+            for (int h = posit; h < arr.length - posit; h++)
             {
                 if (h == posit || h == arr.length - (1 + posit))
                 {
@@ -242,14 +242,22 @@ public class FundamentalsThree
                     }
                 }
 
-                else if (posit != arr[0].length - (1 + posit))
+                else if (h > posit || h < arr[0].length - (1 + posit))
                 {
-                    temp += arr[h][posit];
-                    temp += arr[h][arr[0].length - (1 + posit)];
+                    if (posit == arr[0].length - (1 + posit))
+                        temp += arr[h][posit];
+                    else
+                    {
+                        temp += arr[h][posit];
+                        temp += arr[h][arr[0].length - (1 + posit)];
+                    }
                 }
             }
-            System.out.println(temp);
+            if (temp > result)
+            {
+                result = temp;
+            }
         }
-        return 0;
+        return result;
     }
 }
