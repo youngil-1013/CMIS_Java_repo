@@ -273,9 +273,10 @@ public class FundamentalsThree
                 boolean taken = false;
                 while (taken == false)
                 {
-                    int rdmX = (int) (Math.random() * (list[0].length));
-                    int rdmY = (int) (Math.random() * (list.length));
-                    if (newList[rdmY][rdmX] == 0 && (list[y][x] != list[rdmY][rdmX]))
+                    int rdmX = (int) Math.random() * (list[0].length - 1);
+                    System.out.println(rdmX);
+                    int rdmY = (int) Math.random() * (list.length - 1);
+                    if (newList[rdmY][rdmX] == 0 && !(rdmY == y && rdmX == x))
                     {
                         newList[rdmY][rdmX] = list[y][x];
                         taken = true;
@@ -284,5 +285,5 @@ public class FundamentalsThree
             }
         }
         return newList;
-    } // end of 14
+    }
 }
