@@ -242,7 +242,6 @@ public class FundamentalsThree
                         temp += arr[h][w];
                     }
                 }
-
                 else if (h > posit || h < arr[0].length - (1 + posit))
                 {
                     if (posit == arr[0].length - (1 + posit))
@@ -266,6 +265,7 @@ public class FundamentalsThree
     public static int [][] rdmSpot (int [][] list)
     {
         int [][] newList = new int [list.length][list[0].length];
+        int position = (list.length * list[0].length) - 1;
         for (int y = 0; y < list.length; y ++)
         {
             for (int x = 0; x < list[0].length; x ++)
@@ -280,7 +280,21 @@ public class FundamentalsThree
                         newList[rdmY][rdmX] = list[y][x];
                         taken = true;
                     }
+                    if (newList[rdmY][rdmX] == 0 && position == 0 && list[y][x] == list[rdmY][rdmX])
+                    {
+                        if (rdmX == 0)
+                        {
+                            newList[rdmY][rdmX] = newList[rdmY][rdmX + 1];
+                            newList[rdmY][rdmX + 1] = list[y][x];
+                        }
+                        else
+                        {
+                            newList[rdmY][rdmX] = newList[rdmY][rdmX - 1];
+                            newList[rdmY][rdmX - 1] = list[y][x];
+                        }
+                    }
                 }
+                position --;
             }
         }
         return newList;
