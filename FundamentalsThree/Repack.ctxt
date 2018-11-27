@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Repack
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array\ w
+comment2.target=int[][]\ repack(int[][],\ int)
+comment3.params=h\ w\ random
+comment3.target=int[][]\ getArray(int,\ int,\ boolean)
+comment4.params=array
+comment4.target=void\ print(int[][])
+numComments=5
