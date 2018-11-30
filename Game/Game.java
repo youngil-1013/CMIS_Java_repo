@@ -30,7 +30,7 @@ public class Game
             playerY = (int) (Math.random() * (Map.length));
             playerX = (int) (Math.random() * (Map.length));
         }
-        Map [playerY][playerX] = "P";
+        Map [playerY][playerX] = Character.toString(('\u25C9'));
         int Barrier = 3;
         for (int y = 0; y < height; y ++)
         {     
@@ -39,7 +39,7 @@ public class Game
                 Barrier = (int) (Math.random() * 4);
                 if (Barrier == 0 && Map [y][x] == "o")
                 {
-                    Map [y][x] = Character.toString((char)144);
+                    Map [y][x] = Character.toString(('\u258A'));
                 }
             }
         }
@@ -50,18 +50,22 @@ public class Game
             String input = scan.next();
             if (input.equals("w"))
             {
-                if (Map [playerY - 1][playerX] != "|")
+                if (Map [playerY - 1][playerX] != Character.toString(('\u258A')))
                 {
                     Map [playerY - 1][playerX] = Map [playerY][playerX];
                     Map [playerY][playerX] = "o";
                     playerY = playerY - 1; 
-                    playerX = playerX; 
+                    playerX = playerX;
+                    Print (Map);
                 }
-                Print (Map);
+                else
+                {
+                    Print (Map);
+                }
             }
             else if (input.equals("s"))
             {
-                if (Map [playerY + 1][playerX] != "|")
+                if (Map [playerY + 1][playerX] != Character.toString(('\u258A')))
                 {
                     Map [playerY + 1][playerX] = Map [playerY][playerX];
                     Map [playerY][playerX] = "o";
@@ -72,7 +76,7 @@ public class Game
             }
             else if (input.equals("a"))
             {
-                if (Map [playerY][playerX - 1] != "|")
+                if (Map [playerY][playerX - 1] != Character.toString(('\u258A')))
                 {
                     Map [playerY][playerX - 1] = Map [playerY][playerX];
                     Map [playerY][playerX] = "o";
@@ -83,7 +87,7 @@ public class Game
             }
             else if (input.equals("d"))
             {
-                if (Map [playerY][playerX + 1] != "|")
+                if (Map [playerY][playerX + 1] != Character.toString(('\u258A')))
                 {
                     Map [playerY][playerX + 1] = Map [playerY][playerX];
                     Map [playerY][playerX] = "o";
@@ -96,7 +100,7 @@ public class Game
             if (playerY == exitY && playerX == exitX)
             {
                 gameOver = true; 
-                System.out.println("U w U\nYOU WIN BOI");
+                System.out.println("Next Stage (Updating)");
             }
         }
     }
