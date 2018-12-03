@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=BubbleSort
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=int[]\ sort(int[])
+comment3.params=w\ random
+comment3.target=int[]\ getArray(int,\ boolean)
+comment4.params=array
+comment4.target=void\ print(int[])
+numComments=5
