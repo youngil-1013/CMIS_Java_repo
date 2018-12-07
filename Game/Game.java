@@ -25,6 +25,8 @@ public class Game
         Map [exitY][exitX] = "X";
         int playerY = exitY;
         int playerX = exitX;
+        int playerTempY = 0;
+        int playerTempX = 0;
         while (playerY == exitY && playerX == exitX)
         {
             playerY = (int) (Math.random() * (Map.length));
@@ -50,50 +52,35 @@ public class Game
             String input = scan.next();
             if (input.equals("w"))
             {
-                if (Map [playerY - 1][playerX] != Character.toString(('\u258A')))
-                {
-                    Map [playerY - 1][playerX] = Map [playerY][playerX];
-                    Map [playerY][playerX] = "o";
-                    playerY = playerY - 1; 
-                    playerX = playerX;
-                    Print (Map);
-                }
-                else
-                {
-                    Print (Map);
-                }
+                playerTempY = playerY - 1;
+                playerTempX = playerX;
             }
             else if (input.equals("s"))
             {
-                if (Map [playerY + 1][playerX] != Character.toString(('\u258A')))
-                {
-                    Map [playerY + 1][playerX] = Map [playerY][playerX];
-                    Map [playerY][playerX] = "o";
-                    playerY = playerY + 1; 
-                    playerX = playerX;
-                }
-                Print (Map);
+                playerTempY = playerY + 1;
+                playerTempX = playerX;
             }
             else if (input.equals("a"))
             {
-                if (Map [playerY][playerX - 1] != Character.toString(('\u258A')))
-                {
-                    Map [playerY][playerX - 1] = Map [playerY][playerX];
-                    Map [playerY][playerX] = "o";
-                    playerY = playerY; 
-                    playerX = playerX - 1;
-                }
-                Print (Map);
+                playerTempY = playerY;
+                playerTempX = playerX - 1;
             }
             else if (input.equals("d"))
             {
-                if (Map [playerY][playerX + 1] != Character.toString(('\u258A')))
-                {
-                    Map [playerY][playerX + 1] = Map [playerY][playerX];
-                    Map [playerY][playerX] = "o";
-                    playerY = playerY; 
-                    playerX = playerX + 1;
-                }
+                playerTempY = playerY;
+                playerTempX = playerX + 1;
+            }
+
+            if (Map [playerTempY][playerTempX].equals(Character.toString(('\u258A'))))
+            {
+                Print (Map);
+            }
+            else
+            {
+                Map [playerTempY][playerTempX] = Map [playerY][playerX];
+                Map [playerY][playerX] = "o";
+                playerY = playerTempY; 
+                playerX = playerTempX;
                 Print (Map);
             }
 
