@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=RecursionEx
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=a\ b
+comment2.target=int\ multiply(int,\ int)
+comment3.params=a\ b
+comment3.target=int\ div(int,\ int)
+comment4.params=a\ b
+comment4.target=int\ sqr(int,\ int)
+numComments=5
