@@ -6,5 +6,5 @@ comment2.params=
 comment2.target=void\ init()
 comment3.params=
 comment3.target=void\ behave()
-comment3.text=\n\ What\ your\ robot\ can\ do\:\n\ right()\ \=>\ move\ 1\ to\ the\ right\n\ left()\ \=>\ move\ 1\ to\ the\ left\n\ up()\ \=>\ move\ 1\ up\n\ down()\ \=>\ move\ 1\ down\n\ isClearRight()\ \=>\ true\ means\ no\ block\ to\ the\ right\n\ isClearLeft()\ \=>\ true\ means\ no\ block\ to\ the\ left\n\ isClearUp()\ \=>\ true\ means\ no\ block\ up\n\ isClearDown()\ \=>\ true\ means\ no\ block\ down\n
+comment3.text=\n\ What\ your\ robot\ can\ do\:\n\ right()\ \=>\ move\ 1\ to\ the\ right\n\ left()\ \=>\ move\ 1\ to\ the\ left\n\ up()\ \=>\ move\ 1\ up\n\ down()\ \=>\ move\ 1\ down\n\ isClearRight()\ \=>\ true\ means\ no\ block\ to\ the\ right\n\ isClearLeft()\ \=>\ true\ means\ no\ block\ to\ the\ left\n\ isClearUp()\ \=>\ true\ means\ no\ block\ up\n\ isClearDown()\ \=>\ true\ means\ no\ block\ down\n\ setData(idx,\ int)\n\ getData(idx)\n\ 0\:\ State\ (0\ \=\ Corner,\ 1\ \=\ foundCorner/nullWidth,\ 2\ \=\ foundWidth/nullHeight)\n\ 1\:\ width;\n\ 2\:\ height;\n\ 3\n\ 4\n\ 5\n\ 6\n\ 7\n\ 8\n\ 9\n
 numComments=4

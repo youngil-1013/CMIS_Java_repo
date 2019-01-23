@@ -19,8 +19,8 @@ public class MergeSort
             {
                 back[index] = array[index + front.length];
             }
-            MergeSort (front);
-            MergeSort (back);
+            front = MergeSort (front);
+            back = MergeSort (back);
             //Merging
             int[] mergedArray = new int [front.length + back.length];
             int frontIndex = 0;
@@ -53,6 +53,5 @@ public class MergeSort
             }
             return mergedArray;
         }
-
     }
 }

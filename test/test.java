@@ -19,7 +19,7 @@ public class test
             System.out.print (front[index]);
         }
         System.out.println ();
-        for (int index = 0; index < front.length; index ++)
+        for (int index = 0; index < back.length; index ++)
         {
             System.out.print (back[index]);
         }

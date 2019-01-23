@@ -20,33 +20,64 @@ public class Youngil extends Robot
      * isClearLeft() => true means no block to the left
      * isClearUp() => true means no block up
      * isClearDown() => true means no block down
+     * setData(idx, int)
+     * getData(idx)
+     * 0: State (0 = Corner, 1 = foundCorner/nullWidth, 2 = foundWidth/nullHeight)
+     * 1: width;
+     * 2: height;
+     * 3
+     * 4
+     * 5
+     * 6
+     * 7
+     * 8
+     * 9
      */
     public void behave()
     {
-        boolean upAndDown = false;
-
+        if (getData(0) == 0)
         {
-            if (isClearRight() == true)
-                right();
-            if (upAndDown == false && isClearRight() == false)
+            if (isClearUp())
             {
-                if (isClearUp() == true)
-                {
-                    up();
-                }
-                if (isClearDown() == true)
-                {
-                    down();
-                }
-                if (isClearDown() == false && isClearUp() == false)
-                    upAndDown = true;
+                up();
             }
-            if (upAndDown == true)
+            else if (isClearRight())
+            {
+                right();
+            }
+            else
+            {
+                setData(0,1);
+            }
+        }
+        else if (getData(0) == 1)
+        {
+            if (!isClearLeft())
+            {
+                setData(0,2);
+            }
+            else
             {
                 left();
-                if (isClearDown() == true || isClearUp() == true)
-                    upAndDown = false;
+                setData(1, getData(1)+1);
             }
+        }
+        else if (getData(0) == 2)
+        {
+            if (!isClearDown())
+            {
+                setData(0,3);
+            }
+            else
+            {
+                down();
+                setData(2, getData(2)+1);
+            }
+        }
+        else
+        {
+            //System.out.println(getData(1));
+            System.out.println(getData(2));
         }
     }
 }
