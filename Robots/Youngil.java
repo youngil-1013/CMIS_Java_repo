@@ -27,9 +27,9 @@ public class Youngil extends Robot
      * 1: width;
      * 2: height;
      * 3: currentWidth;
-     * 4: currentHeight;
-     * 5: right/left (0/1)
-     * 6
+     * 4: movementOnSideOfBox (0 = up, 1 = left, 2 = bottom, 3 = right)
+     * 5: right/left for currentWidth(0/1)
+     * 6: current index of side of box (0-9);
      * 7
      * 8
      * 9
@@ -79,38 +79,37 @@ public class Youngil extends Robot
         {
             if (getData (5) == 0 && getData(3) < getData(1))//direction we want is right(left edge rn)
             {
-                right();
                 setData(3, getData(3) + 1);//adds 1 to currentWidth
+                right();
+                if (!isClearRight()){
+                    if (getData(3) != getData(1))
+                    {
+                        setData(0, 5);
+                    }
+                    else
+                    {
+                        setData(5, 1);//revert the direction we want to left
+                        setData(3, 0);//reset currentWidth;
+                        setData(0, 4);//move up 1
+                    }
+                }
             }
             else if (getData(5) == 1 && getData(3) < getData(1))//direction we want is left(right edge rn)
             {
-                left();
                 setData(3, getData(3) + 1);//adds 1 to currentWidth
-            }
-            else if ((getData(5) == 0 && !isClearRight()))//direction we are going is right
-            {
-                if (getData(3) != getData(1))
+                left();
+                if(!isClearLeft())
                 {
-                    setData(0, 5);
-                }
-                else
-                {
-                    setData(5, 1);//revert the direction we want to left
-                    setData(3, 0);//reset currentWidth;
-                    setData(0, 4);//move up 1
-                }
-            }
-            else if ((getData(5) == 1 && !isClearLeft()))//direction we are going is left
-            {
-                if (getData(3) != getData(1))
-                {
-                    setData(0, 5);
-                }
-                else if (getData(3) == getData(1))
-                { 
-                    setData(5, 0);//revert the direction we want to right
-                    setData(3, 0);//reset currentWidth
-                    setData(0, 4);//move up 1
+                    if (getData(3) != getData(1))
+                    {
+                        setData(0, 5);
+                    }
+                    else if (getData(3) == getData(1))
+                    { 
+                        setData(5, 0);//revert the direction we want to right
+                        setData(3, 0);//reset currentWidth
+                        setData(0, 4);//move up 1
+                    }
                 }
             }
         }
@@ -121,10 +120,94 @@ public class Youngil extends Robot
         }
         else if (getData(0) == 5)
         {
-            System.out.print("fuond");
-            setData(0,66);
+            if (getData(4) == 0)//going up
+            {
+                if (getData(6) <= 10)//check if inside width index
+                {
+                    up();
+                    setData(6, getData(6) + 1);
+                    if (isClearRight() && isClearLeft())
+                    {
+                        System.out.println("Y");
+                        setData(0, 100);
+                    }
+                }
+                else
+                {
+                    if (getData(5) == 0)//if we start from right bottom
+                    {
+                        setData(4, 3);//up --> right
+                        setData(6, 0);
+                    }
+                    else
+                    {
+                        setData(4, 1);//up --> left
+                        setData(6, 0);
+                    }
+                }
+            }
+            else if (getData(4) == 1)//going left
+            {
+                if (getData(6) <= 11)//check if inside width index
+                {
+                    left();
+                    setData(6, getData(6) + 1);
+                    if (isClearUp() && isClearDown())
+                    {
+                        System.out.println("Y");
+                        setData(0, 100);
+                    }
+                }
+                else
+                {
+                    setData(6, 0);
+                    setData(4, 2);
+                }
+            }
+            else if (getData(4) == 3)//going right
+            {
+                if (getData(6) <= 11)//check if inside width index
+                {
+                    right();
+                    setData(6, getData(6) + 1);
+                    if (isClearUp() && isClearDown())
+                    {
+                        System.out.println("Y");
+                        setData(0, 100);
+                    }
+                }
+                else
+                {
+                    setData(6, 0);
+                    setData(4, 2);
+                }
+            }
+            else if (getData(4) == 2)//going down
+            {
+                if (getData(6) <= 11)//check if inside width index
+                {
+                    down();
+                    setData(6, getData(6) + 1);
+                    if (isClearUp() && isClearDown())
+                    {
+                        System.out.println("Y");
+                        setData(0, 100);
+                    }
+                }
+                else
+                {
+                    if (getData(5) == 0)//if we start from right bottom
+                    {
+                        setData(4, 1);//down --> right
+                        setData(6, 0);
+                    }
+                    else
+                    {
+                        setData(4, 3);//down --> left
+                        setData(6, 0);
+                    }
+                }
+            }
         }
-        
     }
 }
-
