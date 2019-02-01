@@ -1,13 +1,12 @@
 public class Tester
 {
     public static void main(String[] args){
-        ArrayType at = ArrayType.SORTED; //SORTED, RANDOM, or REVERSED
-        int n = 20;
+        ArrayType at = ArrayType.RANDOM; //SORTED, RANDOM, or REVERSED
+        int n = 10000;
         int[] array = Util.getArray(n, at);
         int[] tmp = array;
         long start, stop, btime, itime, stime, mtime;
-        System.out.println("UNSORTED");
-        Util.print(array);
+        
         
         start = System.nanoTime();
         BubbleSort.sort(array);
@@ -27,9 +26,6 @@ public class Tester
         start = System.nanoTime();
         MergeSort.sort(array);
         mtime = System.nanoTime() - start;
-        
-        System.out.println("SORTED");
-        Util.print(array);
         
         System.out.format(
         "BubbleSort: %d %d\n"+
