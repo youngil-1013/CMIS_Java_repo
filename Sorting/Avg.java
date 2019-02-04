@@ -1,10 +1,13 @@
 public class Avg
 {
     public static void main(String[] args){
-        ArrayType at = ArrayType.RANDOM; //SORTED, RANDOM, or REVERSED
-        int n = 100000;
+        ArrayType at = ArrayType.SORTED; //SORTED, RANDOM, or REVERSED
+        int n = 0;
         int[] array = Util.getArray(n, at);
-        int[] tmp = array;
+        int[] tmp = new int[array.length];
+        for(int i = 0; i < array.length; i++){
+            tmp[i] = array[i];
+        }
         long start, stop, btime, itime, stime, mtime;
         long[] valTemp = new long [50];
         long avgTemp = 0;
@@ -23,7 +26,9 @@ public class Avg
         }
         avgB = avgTemp/10;
         avgTemp = 0;
-        
+        for(int i = 0; i < array.length; i++){
+            tmp[i] = array[i];
+        }
         for (int times = 0; times < 50; times ++)
         {
             start = System.nanoTime();
@@ -37,7 +42,9 @@ public class Avg
         }
         avgS = avgTemp/10;
         avgTemp = 0;
-
+        for(int i = 0; i < array.length; i++){
+            tmp[i] = array[i];
+        }
         for (int times = 0; times < 50; times ++)
         {
             start = System.nanoTime();
@@ -51,7 +58,9 @@ public class Avg
         }
         avgI = avgTemp/10;
         avgTemp = 0;
-
+        for(int i = 0; i < array.length; i++){
+            tmp[i] = array[i];
+        }
         for (int times = 0; times < 50; times ++)
         {
             start = System.nanoTime();
