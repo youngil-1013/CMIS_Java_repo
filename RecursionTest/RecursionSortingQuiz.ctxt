@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=RecursionSortingQuiz
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=n
+comment2.target=int\ factorial(int)
+comment2.text=\n\ @param\ n\ the\ value\n\ @return\ n\!\n\ \n\ Factorials\n\ n\!\ \=>\ n\ *\ n-1\ *\ n-2\ *\ ...\ *\ n\ -(n-1)\n\ 10\!\ \=>\ 10\ *\ 9\ *\ 8\ *\ 7\ *\ 6\ *\ 5\ *\ 4\ *\ 3\ *\ 2\ *\ 1\ \=>\ 3628800\n\ 5\!\ \=>\ 5\ *\ 4\ *\ 3\ *\ 2\ *\ 1\ \=>\ 120\n\ 0\!\ \=>\ 1\n
+comment3.params=array
+comment3.target=int[]\ kiefferSort(int[])
+comment3.text=\n\ @param\ array\ the\ array\ to\ be\ sorted\n\ @return\ the\ array\ sorted\n
+numComments=4
