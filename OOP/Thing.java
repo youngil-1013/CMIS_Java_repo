@@ -13,7 +13,24 @@ public class Thing
         this.Str = "yete";
     }
     
-
+    public Thing (int fieldvalue)
+    {
+        this();
+        this.Integer = fieldvalue;
+    }
+    
+    public Thing (boolean fieldvalue)
+    {
+        this(1);
+        this.Bool = fieldvalue;
+    }
+    
+    public Thing (double fieldvalue)
+    {
+        this(false);
+        this.Doub = fieldvalue;
+    }
+    
     public void setInteger(int newValue)
     {
         this.Integer = newValue;
