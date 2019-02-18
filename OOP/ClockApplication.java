@@ -1,13 +1,18 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 public class ClockApplication
 {
     public static void main (String[] arg)
     {
         Clock kitchenClock = new Clock();
         System.out.println(kitchenClock.toString());
-        int userHr = Integer.parseInt(JOptionPane.showInputDialog("Hour:"));
-        int userMin = Integer.parseInt(JOptionPane.showInputDialog("Minute:"));
-        int userSec = Integer.parseInt(JOptionPane.showInputDialog("Second:"));
-        Clock bedroonClock = new Clock(userHr, userMin, userSec);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hour?");
+        int userHr = input.nextInt();
+        System.out.println("Minute?");
+        int userMin = input.nextInt();
+        System.out.println("Second?");
+        int userSec = input.nextInt();
+        Clock bedroomClock = new Clock(userHr, userMin, userSec);
+        System.out.println(bedroomClock.toString());
     }
 }

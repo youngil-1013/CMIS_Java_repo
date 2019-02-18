@@ -18,7 +18,7 @@ public class Clock
         this.min = minute;
         this.sec = second;
     }
-    
+
     public String toString()
     {
         return String.format("The time is %d:%d:%d", hr, min, sec);
