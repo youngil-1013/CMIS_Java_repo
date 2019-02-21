@@ -30,6 +30,6 @@ public class Student
 
     public String toString()
     {
-        return String.format("Name: %s\nGPA: %b\nGrade Level: %i", name, GPA, grade);
+        return String.format("Name: %s\nGPA: %b\nGrade Level: %d", name, GPA, grade);
     }
 }
