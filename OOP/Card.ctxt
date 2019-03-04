@@ -2,4 +2,8 @@
 comment0.target=Card
 comment1.params=
 comment1.target=Card()
-numComments=2
+comment2.params=suit\ rank
+comment2.target=Card(int,\ int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
