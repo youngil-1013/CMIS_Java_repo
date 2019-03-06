@@ -14,6 +14,7 @@ public class CardApplication
                 place ++;
             }
         }
+        
         for (int dPlace = 0; dPlace < 52; dPlace ++)
         {
             System.out.println(deck[dPlace]);

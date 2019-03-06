@@ -14,6 +14,11 @@ public class Card
         this.suit = suit;
         this.rank = rank;
     }
+    
+    public int getRank()
+    {
+        return suit;
+    }
 
     public String toString(){
         String[] suits = {"H","D","S","C"};
