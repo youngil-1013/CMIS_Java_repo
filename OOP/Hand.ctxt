@@ -2,4 +2,10 @@
 comment0.target=Hand
 comment1.params=
 comment1.target=Hand()
-numComments=2
+comment2.params=card
+comment2.target=void\ addCard(Card)
+comment3.params=
+comment3.target=int\ getValue()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

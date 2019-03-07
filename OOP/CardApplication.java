@@ -4,6 +4,7 @@ public class CardApplication
     {
         Card[] deck = new Card[52];
         Card dCard = new Card();
+        
         int place = 0;
         for (int tmpSuit = 0; tmpSuit < 4; tmpSuit ++)
         {
@@ -15,9 +16,13 @@ public class CardApplication
             }
         }
         
-        for (int dPlace = 0; dPlace < 52; dPlace ++)
+        Hand player1 = new Hand();
+        while (player1.getValue() < 21)
         {
-            System.out.println(deck[dPlace]);
+            player1.addCard(deck[(int)(Math.random()*52)]);
         }
+        System.out.println(player1);
+        int player1Score = player1.getValue();
+        System.out.println(player1Score);
     }
 }

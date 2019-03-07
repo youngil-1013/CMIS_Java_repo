@@ -12,10 +12,23 @@ public class Hand
     }
 
     public int getValue(){
-        for (Card card : cards)
-        {
-            if (getRank.card == )
+        int returnVal = 0;
+        for (Card card : cards){
+            int val = card.getRank();
+            if (1 <= val && val <= 9){
+                returnVal += (val + 1);
+            }
+            else if (val > 9){
+                returnVal += 10;
+            }
+            else{
+                returnVal += 11;
+            }
         }
+        if (returnVal == 22){
+            returnVal = 12;
+        }
+        return returnVal;
     }
 
     public String toString(){
