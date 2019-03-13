@@ -29,11 +29,13 @@ public class Deck
 
     public void shuffle(){
         int idxShuffled = 0;
-        while (cards.size() > 0)
+        int num = 2000;
+        while (num > 0)
         {
-            int idxCards = (int)(Math.random() * cards.size());
-            Card tmpCard = cards.get(idxCards);
-            cards.set(idxShuffled);
+            int idxCards = ((int)(Math.random() * cards.size()));
+            Card tmpCard = cards.remove(idxCards);
+            cards.add(tmpCard);
+            num --;
         }
     }
 
