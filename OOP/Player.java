@@ -19,8 +19,21 @@ public class Player
         this.bet = 10;
     }
     
-    public void addCard (Card card)
+    public void setHand(Hand hand)
     {
-        hand.addCard(card);
+        this.hand = hand;
+    }
+    
+    public int getScore()
+    {
+        return hand.getValue();
+    }
+    
+    public String toString()
+    {
+        String out = "";
+        out += name + " ";
+        out += hand.toString();
+        return out;
     }
 }
