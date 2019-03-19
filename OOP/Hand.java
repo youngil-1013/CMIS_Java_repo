@@ -10,6 +10,10 @@ public class Hand
     public void addCard(Card card){
         cards.add(card);
     }
+    
+    public Card get(int n){
+        return cards.get(n);
+    }
 
     public int getValue(){
         int returnVal = 0;

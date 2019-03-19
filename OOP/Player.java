@@ -5,32 +5,57 @@ public class Player
     private int bet;
     private Hand hand;
     private int playerNum = 0;
-    public Player()
-    {
+    public Player(){
         this.name = "player" + playerNum;
-        this.chips = 1000;
+        this.chips = 100;
         this.bet = 10;
     }
-    
-    public Player(String name)
-    {
+
+    public Player(String name){
         this.name = name;
-        this.chips = 1000;
+        this.chips = 100;
         this.bet = 10;
     }
-    
-    public void setHand(Hand hand)
-    {
+
+    public Player(String name, int chips){
+        this.name = name;
+        this.chips = chips;
+        this.bet = 10;
+    }
+
+    public void setHand(Hand hand){
         this.hand = hand;
     }
-    
-    public int getScore()
-    {
+
+    public int getScore(){
         return hand.getValue();
     }
+
+    public int chips(){
+        return chips;
+    }
+
+    public void setChips(int chips){
+        this.chips = chips;
+    }
+
+    public Hand hand(){
+        return hand;
+    }
     
-    public String toString()
-    {
+    public Card hand(int n){
+        return hand.get(0);
+    }
+
+    public int bet(){
+        return bet;
+    }
+
+    public String name(){
+        return name;
+    }
+
+    public String toString(){
         String out = "";
         out += name + " ";
         out += hand.toString();
