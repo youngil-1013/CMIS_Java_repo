@@ -15,7 +15,7 @@ public class Game
         player = new Player(name);
         players.add(player);
     }
-    
+
     public void addHuman(){
         System.out.println("What is your name?");
         Scanner scanner = new Scanner(System.in);
@@ -48,6 +48,38 @@ public class Game
         System.out.println(out);
     }
 
+    public void setupPlayer(){
+        if (deck.nCards() < 2 * players.size()){
+            deck = new Deck(1);
+        }
+        deck.shuffle();
+        for (int player = 0; player < players.size(); player ++){
+            Hand tmphand = new Hand();
+            for(int num = 0; num < 2; num ++){
+                Card tmpcard = deck.draw();
+                tmphand.addCard(tmpcard);
+            }
+            Player tmpplayer = players.get(player);
+            tmpplayer.setHand(tmphand);
+        }
+        String out = "###Black Jack###\n";
+        out += "---dealer---\nhand: " + (players.get(0)).hand(1) + " **\nchips: 100000\n";
+        for (int player = 1; player < players.size(); player ++){
+            out += "---" + (players.get(player)).name() + "---\nhand: "; 
+            out += (players.get(player)).hand() + "\nchips: " + players.get(player).chips() + "\n";
+        }
+        System.out.println(out);
+        if (players.get(1).chips() > 0){
+            int userbet = 1000000000;
+            while (players.get(1).chips() < userbet){
+                System.out.println("How much would you like to bet (At least 0)");
+                Scanner scanner = new Scanner(System.in);
+                userbet = scanner.nextInt();
+                players.get(1).setBet(userbet);
+            }
+        }
+    }
+
     public void playRound(){
         winner = new int[players.size()];
         int dealerVal = 0;
@@ -76,7 +108,7 @@ public class Game
             }
         }
     }
-    
+
     public int broke(){
         int out = 0;
         for (Player player: players)

@@ -20,7 +20,7 @@ public class Player
     public Player(String name, int chips){
         this.name = name;
         this.chips = chips;
-        this.bet = 10;
+        this.bet = 0;
     }
 
     public void setHand(Hand hand){
@@ -47,6 +47,10 @@ public class Player
         return hand.get(0);
     }
 
+    public void setBet(int bet){
+        this.bet = bet;
+    }
+    
     public int bet(){
         return bet;
     }
