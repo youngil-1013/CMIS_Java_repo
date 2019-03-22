@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Course
+comment1.params=courseName\ grade
+comment1.target=Course(java.lang.String,\ java.lang.Double)
+comment2.params=
+comment2.target=java.lang.Double\ getGrade()
+comment3.params=
+comment3.target=java.lang.String\ getName()
+numComments=4
