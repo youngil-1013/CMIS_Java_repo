@@ -1,7 +1,13 @@
 #BlueJ class context
 comment0.target=Thing
 comment1.params=
-comment1.target=Thing()
-comment2.params=name
-comment2.target=Thing(java.lang.String)
-numComments=3
+comment1.target=int\ getVolume()
+comment2.params=volume
+comment2.target=void\ setPopulation(int)
+comment3.params=
+comment3.target=Thing()
+comment4.params=name
+comment4.target=Thing(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

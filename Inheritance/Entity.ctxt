@@ -2,6 +2,12 @@
 comment0.target=Entity
 comment1.params=name
 comment1.target=Entity(java.lang.String)
-comment2.params=
-comment2.target=java.lang.String\ toString()
-numComments=3
+comment2.params=name\ age
+comment2.target=Entity(java.lang.String,\ int)
+comment3.params=
+comment3.target=int\ getAge()
+comment4.params=age
+comment4.target=void\ setAge(int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
