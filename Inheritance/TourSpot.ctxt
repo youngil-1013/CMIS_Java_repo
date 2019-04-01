@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TourSpot
+comment1.params=
+comment1.target=TourSpot()
+comment2.params=name
+comment2.target=TourSpot(java.lang.String)
+comment3.params=name\ production
+comment3.target=TourSpot(java.lang.String,\ java.lang.String)
+comment4.params=
+comment4.target=int\ ageSpot()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

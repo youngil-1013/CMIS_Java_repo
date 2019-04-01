@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Plasma
+comment1.params=
+comment1.target=Plasma()
+comment2.params=model\ cost
+comment2.target=Plasma(java.lang.String,\ double)
+numComments=3

@@ -11,9 +11,10 @@ public class Application
         Sehan.setAge(11);
         entities.add(Sehan);
 
-        Place p1 = new Place("New York");
-        p1.setPopulation(400);
-        entities.add(p1);
+        TourSpot f1 = new TourSpot("Ford", "cars");
+        f1.setPopulation(400);
+        entities.add(f1);
+        System.out.println(f1 + "\n" + f1.ageSpot());
 
         Idea I1 = new Idea();
         I1.setPopularity(4000);
