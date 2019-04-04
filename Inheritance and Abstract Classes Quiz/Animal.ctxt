@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Animal
+comment1.params=x\ y
+comment1.target=Animal(int,\ int)
+comment2.params=what
+comment2.target=boolean\ eat(java.lang.String)
+comment3.params=dx\ dy
+comment3.target=void\ move(int,\ int)
+comment4.params=newX\ newY
+comment4.target=void\ setLocation(int,\ int)
+comment5.params=
+comment5.target=java.util.List\ getLocation()
+comment6.params=newGraphic
+comment6.target=void\ setGraphic(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getGraphic()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9
