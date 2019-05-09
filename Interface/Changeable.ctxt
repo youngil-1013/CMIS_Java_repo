@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Changeable
+comment1.params=value
+comment1.target=void\ change(int)
+comment2.params=
+comment2.target=int\ getPosition()
+numComments=3

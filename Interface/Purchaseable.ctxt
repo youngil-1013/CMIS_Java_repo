@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Purchaseable
+comment1.params=
+comment1.target=int\ getMoney()
+comment2.params=add
+comment2.target=void\ add(int)
+numComments=3
