@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Player
-comment0.text=\n\ Write\ a\ description\ of\ class\ Player\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Player()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Player\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-comment2.params=
-comment2.target=void\ act()
+comment2.params=level\ exp\ health\ ad
+comment2.target=Player(int,\ int,\ int,\ int)
 comment3.params=
-comment3.target=void\ move()
+comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ detect()
-numComments=5
+comment4.target=void\ move()
+comment5.params=
+comment5.target=void\ detect()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

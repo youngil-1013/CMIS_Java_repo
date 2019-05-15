@@ -1,27 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Player extends Actor
+public class Player extends Entity
 {
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+
     public Player(){
-        GreenfootImage image = getImage();
-        image.scale(50,50);
-        setImage(image);
+        super();
+    }
+    
+    public Player(int level, int exp, int health, int ad){
+        super(level, exp, health, ad);
     }
 
-    public void act() 
-    {
+    public void act(){
         move();
-        Greenfoot.delay(8);
+        detect();
+        Greenfoot.delay(6);
     }
 
     public void move(){
@@ -35,16 +32,20 @@ public class Player extends Actor
             setLocation(getX() + 25, getY());
         }
     }
-    
+
     public void detect(){
         Actor Enemy;
         Enemy = getOneObjectAtOffset(0,0,Enemy.class);
-        
+
         if(Enemy != null){
-            World world;
-            world = getWorld();
-            world.removeObject(Enemy);
+            Battle battle = new Battle();
+            Greenfoot.setWorld(battle);
         }
-        
+    }
+    
+    public String toString(){
+        String out = "";
+        out += "level: " + level + "\n";
+        return out;
     }
 }
