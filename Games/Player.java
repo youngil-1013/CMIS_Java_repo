@@ -10,7 +10,7 @@ public class Player extends Entity
     public Player(){
         super();
     }
-    
+
     public Player(int level, int exp, int health, int ad){
         super(level, exp, health, ad);
     }
@@ -41,11 +41,5 @@ public class Player extends Entity
             Battle battle = new Battle();
             Greenfoot.setWorld(battle);
         }
-    }
-    
-    public String toString(){
-        String out = "";
-        out += "level: " + level + "\n";
-        return out;
     }
 }

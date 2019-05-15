@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private Player player;
+    private ArrayList<Enemy> enemies;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,9 +27,17 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Player player = new Player(1, 0, 5, 2);
-        addObject(player,250,350);
+        player = new Player(1, 0, 5, 2);
+        addObject(player, 250, 350);
         Enemy enemy1 = new Enemy(1, 2, 3, 2);
-        addObject(enemy1,400,50);
+        enemies.add(enemy1); //0
+        addObject(enemy1, 400, 50);
+    }
+    
+    public ArrayList<Entity> getEntities(int enemyNum){
+        ArrayList<Entity> out = new ArrayList<Entity>();
+        out.add(player);
+        out.add(enemies.get(enemyNum));
+        return out;
     }
 }
