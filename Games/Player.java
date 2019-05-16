@@ -2,17 +2,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Player extends Entity
 {
-    /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-
+    private MyWorld world;
     public Player(){
         super();
     }
 
-    public Player(int level, int exp, int health, int ad){
+    public Player(MyWorld world, int level, int exp, int health, int ad){
         super(level, exp, health, ad);
+        this.world = world;
     }
 
     public void act(){
@@ -38,7 +35,7 @@ public class Player extends Entity
         Enemy = getOneObjectAtOffset(0,0,Enemy.class);
 
         if(Enemy != null){
-            Battle battle = new Battle();
+            Battle battle = new Battle(world);
             Greenfoot.setWorld(battle);
         }
     }

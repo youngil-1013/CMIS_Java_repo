@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class MyWorld extends World
 {
     private Player player;
-    private ArrayList<Enemy> enemies;
+    private ArrayList<Enemy> enemies = new ArrayList <Enemy>();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -27,17 +27,18 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        player = new Player(1, 0, 5, 2);
+        player = new Player(this, 1, 0, 5, 2);
         addObject(player, 250, 350);
         Enemy enemy1 = new Enemy(1, 2, 3, 2);
         enemies.add(enemy1); //0
         addObject(enemy1, 400, 50);
     }
-    
+
     public ArrayList<Entity> getEntities(int enemyNum){
         ArrayList<Entity> out = new ArrayList<Entity>();
-        out.add(player);
-        out.add(enemies.get(enemyNum));
+        out.add(0, player);
+        out.add(1, enemies.get(enemyNum));
         return out;
     }
+    //gets (player,enemy)
 }

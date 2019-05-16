@@ -2,9 +2,8 @@
 comment0.target=Player
 comment1.params=
 comment1.target=Player()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Player\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-comment2.params=level\ exp\ health\ ad
-comment2.target=Player(int,\ int,\ int,\ int)
+comment2.params=world\ level\ exp\ health\ ad
+comment2.target=Player(MyWorld,\ int,\ int,\ int,\ int)
 comment3.params=
 comment3.target=void\ act()
 comment4.params=

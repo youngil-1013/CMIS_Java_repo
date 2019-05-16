@@ -8,16 +8,13 @@ import java.util.*;
  */
 public class Battle extends World
 {
-    private ArrayList<Entity> entities = MyWorld.getEntities(0);
-    /**
-     * Constructor for objects of class Battle1.
-     * 
-     */
-
+    private MyWorld main;
+    private ArrayList<Entity> entities;
     public Battle(MyWorld main){
         super(600, 400, 1);
-        
-        showText("Enemy Stats:", 400, 40);
-        showText("Player Stats:", 100, 40);
+        this.main = main;
+        entities = main.getEntities(0);
+        showText("Enemy Stats:\n" + entities.get(1), 400, 80);
+        showText("Player Stats:\n"+ entities.get(0), 100, 80);
     }
 }
