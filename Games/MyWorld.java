@@ -32,6 +32,8 @@ public class MyWorld extends World
         Enemy enemy1 = new Enemy(1, 2, 3, 2);
         enemies.add(enemy1); //0
         addObject(enemy1, 400, 50);
+        player.setLocation(265,336);
+        player.setLocation(351,48);
     }
 
     public ArrayList<Entity> getEntities(int enemyNum){
