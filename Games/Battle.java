@@ -13,21 +13,28 @@ public class Battle extends World
     public Battle(MyWorld main){
         super(600, 400, 1);
         this.main = main;
-        if(confirm(entities)){
+        act();
+        display(entities);
+    }
+
+    public void act(){
+        if (Greenfoot.isKeyDown("left")){
+            erase();
             fight();
         }
     }
 
-    public boolean confirm(ArrayList<Entity> entities){
+    public void display(ArrayList<Entity> entities){
         entities = main.getEntities(0);
         showText("Enemy Stats:\n" + entities.get(1), 500, 80);
         showText("Player Stats:\n"+ entities.get(0), 100, 80);
         showText("Fight or Run?\n <-      ->", 300, 200);
-        if (Greenfoot.isKeyDown("left")){
-            return true;
-        }else{
-            return false;
-        }
+    }
+
+    public void erase(){
+        showText("", 500, 80);
+        showText("", 100, 80);
+        showText("", 300, 200);
     }
 
     public void fight(){
