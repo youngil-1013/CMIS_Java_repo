@@ -7,11 +7,28 @@ import greenfoot.*;
  */
 public class Bullet extends Actor 
 {   
-    public Bullet(){
+    private int rate;
+    private int velocity;
+    private int damage = 5;
 
+    public Bullet(){
+        GreenfootImage image = getImage();
+        image.scale(10,10);
+        setImage(image);
     }
 
-    public void fire(int x, int y){
-        getWorld().showText("L", x, y);
+    public void border(){
+        if(isAtEdge()){
+            getWorld().removeObject(this);
+        }
+    }
+
+    public void act(){
+        move(20);
+        border();
+    }
+    
+    public int getDamage(){
+        return damage;
     }
 }
