@@ -38,8 +38,6 @@ public class Battle extends World
     }
 
     public void fight(){
-        showText("ddddddddddd", 400, 400);
-        showText("ddddddddddd", 100, 400);
-        showText("ddddddddddd", 400, 100);
+        
     }
 }

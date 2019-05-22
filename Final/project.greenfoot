@@ -1,0 +1,14 @@
+#Greenfoot properties
+#Wed May 22 09:35:51 ICT 2019
+class.Shoot.superclass=greenfoot.Actor
+mainWindow.width=850
+project.charset=UTF-8
+version=3.0.0
+class.Main.image=space1.jpg
+class.Player.superclass=greenfoot.Actor
+world.lastInstantiated=Main
+mainWindow.y=40
+class.Player.image=airplane.png
+mainWindow.x=40
+mainWindow.height=600
+class.Main.superclass=greenfoot.World

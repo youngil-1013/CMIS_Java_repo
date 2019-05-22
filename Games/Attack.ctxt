@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=Attack
 comment0.text=\n\ Write\ a\ description\ of\ class\ Fight\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=player\ enemy
-comment1.target=int\ compute(Entity,\ Entity)
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+comment1.params=enemy\ player
+comment1.target=Attack(Entity,\ Entity)
+comment2.params=target\ other
+comment2.target=int\ compute(Entity,\ Entity)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

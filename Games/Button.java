@@ -6,9 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public interface Button {
-    public int compute(Entity player, Entity enemy);
-
-    public void act();
+public class Button extends Actor{
+    Entity enemy;
+    Entity player;
+    World world;
 }
-
