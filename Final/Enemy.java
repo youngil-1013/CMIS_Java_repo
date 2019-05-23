@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     private int health = 10;
+    private int money = 10;
     public Enemy(){
         GreenfootImage image = getImage();
         image.scale(50,50);
@@ -21,14 +22,18 @@ public class Enemy extends Actor
         if (intersect()){
             damage();
         }
+        
         if (health <= 0){
-            this.getWorld().removeObject(this);
+            Main world = (Main) getWorld();
+            world.getPlayer().addMoney(money);
+            getWorld().removeObject(this);
         }
     }    
 
     public void damage(){
-        Actor bullet = (Bullet) getOneIntersectingObject(Bullet.class);
-        this.health -= bullet.getDamage();
+        Bullet bullet = (Bullet) getOneIntersectingObject(Bullet.class);
+        health -= bullet.getDamage();
+        getWorld().removeObject(bullet);
     }
 
     public boolean intersect(){

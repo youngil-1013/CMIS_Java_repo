@@ -6,5 +6,8 @@
  */
 public interface Shootable  
 {
-    public void fire(int x, int y);
+    public void border();
+    public void act();
+    public int getDamage();
+    public void setDamage(int amount);
 }

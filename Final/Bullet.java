@@ -5,7 +5,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bullet extends Actor 
+public class Bullet extends Actor implements Shootable
 {   
     private int rate;
     private int velocity;
@@ -30,5 +30,9 @@ public class Bullet extends Actor
     
     public int getDamage(){
         return damage;
+    }
+    
+    public void setDamage(int amount){
+        damage += amount;
     }
 }
