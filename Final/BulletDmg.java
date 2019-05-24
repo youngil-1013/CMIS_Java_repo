@@ -1,15 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class BulletDmg here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class BulletDmg extends Button
 {
+    private int price = 200;
+
     public BulletDmg(){
-        super("Increase Bullet Damage:\n$300");
+        super("Increase Bullet Damage:\n$", 200);
     }
-   
 }

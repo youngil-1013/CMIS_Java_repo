@@ -1,14 +1,8 @@
 import greenfoot.*;
-/**
- * Write a description of class Bullet here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Bullet extends Actor implements Shootable
 {   
     private int rate;
-    private int velocity;
     private int damage = 5;
 
     public Bullet(){
@@ -32,7 +26,7 @@ public class Bullet extends Actor implements Shootable
         return damage;
     }
     
-    public void setDamage(int amount){
+    public void incDamage(int amount){
         damage += amount;
     }
 }

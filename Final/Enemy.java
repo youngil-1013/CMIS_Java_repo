@@ -1,15 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Enemy here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Enemy extends Actor
 {
     private int health = 10;
-    private int money = 10;
+    private int money = 500;
     public Enemy(){
         GreenfootImage image = getImage();
         image.scale(50,50);
@@ -25,7 +19,8 @@ public class Enemy extends Actor
         
         if (health <= 0){
             Main world = (Main) getWorld();
-            world.getPlayer().addMoney(money);
+            Player player = world.getPlayer();
+            player.addMoney(money);
             getWorld().removeObject(this);
         }
     }    

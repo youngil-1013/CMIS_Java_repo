@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Shootable
-comment0.text=\n\ Write\ a\ description\ of\ class\ Shootable\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Shootable\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ border()
 comment2.params=
@@ -8,5 +8,5 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=int\ getDamage()
 comment4.params=amount
-comment4.target=void\ setDamage(int)
+comment4.target=void\ incDamage(int)
 numComments=5

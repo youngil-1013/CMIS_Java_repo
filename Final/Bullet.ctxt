@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Bullet
-comment0.text=\n\ Write\ a\ description\ of\ class\ Bullet\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Bullet()
 comment2.params=
@@ -10,5 +9,5 @@ comment3.target=void\ act()
 comment4.params=
 comment4.target=int\ getDamage()
 comment5.params=amount
-comment5.target=void\ setDamage(int)
+comment5.target=void\ incDamage(int)
 numComments=6

@@ -9,5 +9,5 @@ public interface Shootable
     public void border();
     public void act();
     public int getDamage();
-    public void setDamage(int amount);
+    public void incDamage(int amount);
 }
