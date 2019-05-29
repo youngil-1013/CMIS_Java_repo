@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Bullet
-comment1.params=
-comment1.target=Bullet()
+comment1.params=dmg
+comment1.target=Bullet(int)
 comment2.params=
 comment2.target=void\ border()
 comment3.params=

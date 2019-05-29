@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=BulletDmg
-comment1.params=
-comment1.target=BulletDmg()
+comment1.params=price
+comment1.target=BulletDmg(int)
 comment2.params=
-comment2.target=void\ go()
-numComments=3
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ go()
+numComments=4

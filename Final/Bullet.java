@@ -2,17 +2,15 @@ import greenfoot.*;
 
 public class Bullet extends Actor implements Shootable
 {   
-    private int rate;
-    private int damage = 5;
+    int damage;
 
-    public Bullet(){
+    public Bullet(int dmg){
+        damage = dmg;
         GreenfootImage image = getImage();
         image.scale(10,10);
         setImage(image);
     }
 
-    public get
-    
     public void border(){
         if(isAtEdge()){
             getWorld().removeObject(this);
@@ -23,11 +21,11 @@ public class Bullet extends Actor implements Shootable
         move(20);
         border();
     }
-    
+
     public int getDamage(){
         return damage;
     }
-    
+
     public void incDamage(int amount){
         damage += amount;
     }

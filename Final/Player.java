@@ -4,9 +4,12 @@ public class Player extends Actor
 {
     private int time = 100;
     private int speed = 3;
-    private int money = 0;
+    private int money = 100;
     private int bulletROF = 1;
     private int laserROF = 0;
+    private int bulletDmg = 3;
+    private int laserDmg = 1;
+    private int [] prices = new int[] {100, 300, 300, 600};//bDmg, bRate, lDmg, lRate
 
     public Player(){
         GreenfootImage image = getImage();
@@ -35,13 +38,29 @@ public class Player extends Actor
     public int getMoney(){
         return money;
     }
-    
+
     public int getBulletROF(){
         return bulletROF;
     }
-    
+
     public int getLaserROF(){
         return laserROF;
+    }
+
+    public int getBulletDmg(){
+        return bulletDmg;
+    }
+
+    public int getLaserDmg(){
+        return laserDmg;
+    }
+
+    public int getPrice(int idx){
+        return prices[idx];
+    }
+
+    public void setPrice(int idx){
+        prices[idx] = prices[idx] + 100;
     }
 
     public void setTime(int time){
@@ -55,13 +74,21 @@ public class Player extends Actor
     public void addMoney(int amount){
         this.money += amount;
     }
-    
+
     public void setBulletROF(int rof){
         this.bulletROF = rof;
-    }	
-    
+    }   
+
     public void setLaserROF(int rof){
         this.laserROF = rof;
+    }
+
+    public void setBulletDmg(int dmg){
+        this.bulletDmg = dmg;
+    }
+
+    public void setLaserDmg(int dmg){
+        this.laserDmg = dmg;
     }
 
     public void move(){
@@ -82,7 +109,7 @@ public class Player extends Actor
     public void shootB(){
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(time <= 0 && mouse != null){
-            Bullet bullet = new Bullet();
+            Bullet bullet = new Bullet(bulletDmg);
             int x = mouse.getX();
             int y = mouse.getY();
             getWorld().addObject(bullet, this.getX(), this.getY());

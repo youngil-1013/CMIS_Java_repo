@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Enemy extends Actor
 {
-    private int health = 10;
-    private int money = 500;
+    private int health = 9;
+    private int money = 50;
     public Enemy(){
         GreenfootImage image = getImage();
         image.scale(50,50);

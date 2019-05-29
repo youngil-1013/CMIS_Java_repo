@@ -1,16 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class BulletDmg extends Button
+public class BulletDmg extends Button // idx 0
 {
-    private int price = 200;
+    private boolean upgradem = false;
+    public BulletDmg(int price){
+        super("Increase Bullet Damage:\n$", price);
+    }
 
-    public BulletDmg(){
-        super("Increase Bullet Damage:\n$", 200);
+    public void act(){
+        super.act();
+        go();
     }
 
     public void go(){
-        Upgrade upgrade = (Upgrade) getWorld();
-        upgrade,
-        upgrade.getPlayer().setBulletROF(upgrade.getPlayer().getBulletROF() + 1);
+        if (!upgradem){
+            Upgrade upgrade = (Upgrade) getWorld();
+            upgrade.getPlayer().setBulletDmg(upgrade.getPlayer().getBulletDmg() + 2);
+            upgrade.getPlayer().setPrice(0);
+            upgradem = true;
+        }
     }
 }
