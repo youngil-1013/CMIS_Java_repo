@@ -3,7 +3,6 @@ import java.util.*;
 public class Main extends World
 {
     private Player player = new Player();
-    private int level = 1;
     public Main(){    
         super(1000, 600, 1); 
         prepare();
@@ -13,6 +12,7 @@ public class Main extends World
     public Main(Player player){
         super(1000, 600, 1); 
         this.player = player;
+        prepare();
         prepare();
         act();
     }
@@ -24,12 +24,12 @@ public class Main extends World
 
     public void check(){
         if (getObjects(Enemy.class).isEmpty()){
+            player.incLevel();
             Greenfoot.setWorld(new Upgrade(player));
         }
     }
 
-    private void prepare()
-    {
+    private void prepare(){
         addObject(player,331,337);
         player.setLocation(112,288);
         Earth earth = new Earth();
@@ -41,7 +41,7 @@ public class Main extends World
     }
 
     private void addEnemy(){
-        for (int idx = 0; idx <= level; idx ++){
+        for (int idx = 0; idx <= player.getLevel(); idx ++){
             Enemy enemy = new Enemy();
             int rdX = (int) (Math.random() * 100 + 900);
             int rdY = (int) (Math.random() * 600);

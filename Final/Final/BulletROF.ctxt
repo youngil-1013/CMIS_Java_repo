@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=BulletROF
+comment1.params=price
+comment1.target=BulletROF(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ go()
+numComments=4

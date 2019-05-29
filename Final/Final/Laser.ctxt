@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Laser
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ laser\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Laser()
+comment2.params=damage
+comment2.target=Laser(int)
+comment3.params=
+comment3.target=void\ border()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=int\ getDamage()
+comment6.params=amount
+comment6.target=void\ incDamage(int)
+numComments=7

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Bullet
+comment1.params=
+comment1.target=Bullet()
+comment2.params=dmg
+comment2.target=Bullet(int)
+comment3.params=
+comment3.target=void\ border()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=int\ getDamage()
+comment6.params=amount
+comment6.target=void\ incDamage(int)
+numComments=7

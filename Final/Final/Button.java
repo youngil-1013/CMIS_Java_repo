@@ -23,11 +23,15 @@ public class Button extends Actor
             ((Upgrade)getWorld()).getPlayer().addMoney(-price);
         }
     }
+    
+    public void go(){
+    }
 
     public void act(){
         out();
         if (Greenfoot.mouseClicked(this)){
             purchase();
+            go();
         }
     }
 
