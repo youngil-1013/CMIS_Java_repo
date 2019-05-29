@@ -1,18 +1,22 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Bullet extends Actor implements Shootable
-{   
+/**
+ * Write a description of class laser here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Laser extends Actor implements Shootable 
+{
     private int rate;
     private int damage = 5;
 
-    public Bullet(){
+    public Laser(){
         GreenfootImage image = getImage();
-        image.scale(10,10);
+        image.scale(getImage().getWidth()*2, getImage().getHeight()/2); 
         setImage(image);
     }
 
-    public get
-    
     public void border(){
         if(isAtEdge()){
             getWorld().removeObject(this);
@@ -23,12 +27,13 @@ public class Bullet extends Actor implements Shootable
         move(20);
         border();
     }
-    
+
     public int getDamage(){
         return damage;
     }
-    
+
     public void incDamage(int amount){
         damage += amount;
     }
 }
+

@@ -7,4 +7,10 @@ public class BulletDmg extends Button
     public BulletDmg(){
         super("Increase Bullet Damage:\n$", 200);
     }
+
+    public void go(){
+        Upgrade upgrade = (Upgrade) getWorld();
+        upgrade,
+        upgrade.getPlayer().setBulletROF(upgrade.getPlayer().getBulletROF() + 1);
+    }
 }

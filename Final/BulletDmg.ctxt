@@ -2,4 +2,6 @@
 comment0.target=BulletDmg
 comment1.params=
 comment1.target=BulletDmg()
-numComments=2
+comment2.params=
+comment2.target=void\ go()
+numComments=3
