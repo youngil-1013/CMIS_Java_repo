@@ -1,18 +1,3 @@
-<<<<<<< HEAD:Final/Button.ctxt
-#BlueJ class context
-comment0.target=Button
-comment1.params=function\ price
-comment1.target=Button(java.lang.String,\ int)
-comment2.params=
-comment2.target=int\ getPrice()
-comment3.params=
-comment3.target=void\ purchase()
-comment4.params=
-comment4.target=void\ act()
-comment5.params=
-comment5.target=void\ out()
-numComments=6
-=======
 #BlueJ class context
 comment0.target=Button
 comment1.params=function\ price
@@ -28,4 +13,3 @@ comment5.target=void\ act()
 comment6.params=
 comment6.target=void\ out()
 numComments=7
->>>>>>> done with bones:Final/Final/Button.ctxt

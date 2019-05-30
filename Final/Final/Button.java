@@ -18,18 +18,17 @@ public class Button extends Actor
     }
 
     public void purchase(){
-        int cash = ((Upgrade)getWorld()).getPlayer().getMoney();
-        if (price <= cash){
+        if (price <= ((Upgrade)getWorld()).getPlayer().getMoney()){
             ((Upgrade)getWorld()).getPlayer().addMoney(-price);
         }
     }
-    
+
     public void go(){
     }
 
     public void act(){
         out();
-        if (Greenfoot.mouseClicked(this)){
+        if (Greenfoot.mouseClicked(this) && (price <= ((Upgrade)getWorld()).getPlayer().getMoney())){
             purchase();
             go();
         }

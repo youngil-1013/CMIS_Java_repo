@@ -18,4 +18,15 @@ public class End extends World
         super(1000, 600, 1);
         showText("YOU SUCK AND EARTH GOT DESTORYED\nRETRY? press R", 500, 300);
     }
+
+    public void act(){
+        retry();
+    }
+
+    public void retry(){
+        if(Greenfoot.isKeyDown("r")){
+            Main main = new Main();
+            Greenfoot.setWorld(main);
+        }
+    }
 }

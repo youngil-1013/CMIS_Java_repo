@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class LaserROF extends Button
 {
+    private Player player;
     public LaserROF(int price){
         super("Increase Laser ROF:\n$", price);
     } 

@@ -11,6 +11,7 @@ public class Upgrade extends World
         addObject(new LaserDmg(player.getPrice(2)), 150, 500);
         addObject(new LaserROF(player.getPrice(3)), 500, 500);
         addObject(new Next(), 850, 500);
+        showText("WELCOME TO THE SHOP!\n\n*ROF stands for rate of fire\n**You can increase laser damage only if \nyou have already purchased the first laser ROF", 500, 100);
     }
     
     public Player getPlayer(){

@@ -4,12 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     private int health = 9;
-    private int money = 60;
+    private int money = 75;
     private Bullet bullet;
     private Laser laser;
     public Enemy(){
         GreenfootImage image = getImage();
-        image.scale(50,50);
+        image.scale(50,30);
         setImage(image);
     }
 

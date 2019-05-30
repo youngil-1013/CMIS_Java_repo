@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=LaserDmg
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LaserDmg\ here\ //\ idx\ 2\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ LaserDmg\ here\ //\ idx\ 2\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=price
 comment1.target=LaserDmg(int)
 comment2.params=

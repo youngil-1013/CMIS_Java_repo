@@ -2,16 +2,11 @@ import greenfoot.*;
 
 public class Bullet extends Actor implements Shootable
 {   
-<<<<<<< HEAD:Final/Bullet.java
-    int damage;
-
-=======
     private int damage;
 
     public Bullet(){
     }
 
->>>>>>> done with bones:Final/Final/Bullet.java
     public Bullet(int dmg){
         damage = dmg;
         GreenfootImage image = getImage();

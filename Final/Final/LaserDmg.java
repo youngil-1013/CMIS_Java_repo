@@ -13,6 +13,7 @@ public class LaserDmg extends Button
     }
 
     public void act(){
+        if (((Upgrade)getWorld()).getPlayer().getLaserROF() > 0)
         super.act();
     }
 

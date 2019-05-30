@@ -14,6 +14,5 @@ public class BulletDmg extends Button // idx 0
         Upgrade upgrade = (Upgrade) getWorld();
         upgrade.getPlayer().setBulletDmg(upgrade.getPlayer().getBulletDmg() + 2);
         upgrade.getPlayer().setPrice(0);
-
     }
 }
