@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     private int health = 9;
-    private int money = 75;
+    private int money = 60;
     private Bullet bullet;
     private Laser laser;
     public Enemy(){
@@ -16,10 +16,17 @@ public class Enemy extends Actor
     public void act() 
     {
         move(-1);
+
+        if (((Main)getWorld()).getPlayer().getLevel() > 3){
+            money = 30;
+        }else if(((Main)getWorld()).getPlayer().getLevel() > 5){
+            money = 15;
+        }
+
         if (intersectB()){
             damageB();
         }
-        
+
         if (intersectL()){
             damageL();
         }
@@ -39,7 +46,7 @@ public class Enemy extends Actor
             getWorld().removeObject(bullet);
         }
     }
-    
+
     public void damageL(){
         laser = (Laser) getOneIntersectingObject(Laser.class);
         if (intersects(laser)){
@@ -54,7 +61,7 @@ public class Enemy extends Actor
             return false;
         }
     }
-    
+
     public boolean intersectL(){
         if(getOneIntersectingObject(Laser.class) != null){
             return true;

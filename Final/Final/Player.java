@@ -32,6 +32,12 @@ public class Player extends Actor
         if(intersect()){
             Greenfoot.setWorld(new Death());
         }
+        
+        World world = getWorld();
+        if (world instanceof Main){
+            ((Main) world).setLevel(level);
+        }
+        
     }
 
     public int getTime(){

@@ -18,6 +18,10 @@ public class Upgrade extends World
         return player;
     }
     
+    public void setPlayer(Player player){
+        this.player = player;
+    }
+    
     public void act(){
         showText(String.format("$%d",player.getMoney()), 100, 100);
     }

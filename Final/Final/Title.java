@@ -13,12 +13,10 @@ public class Title extends World
      * Constructor for objects of class Beginning.
      * 
      */
-    public Title()
-    {    
+    public Title(){
         super(600, 400, 1);
         showText("Press R to start", 300, 100);
-        showText("A VERY CAPITALIST GAME/nUse WASD key to move and I didn't make an\nend gamescene so play until you die or get bored.", 300, 200);
-
+        showText("A VERY GENERIC SPACE SHOOTING GAME\nTHAT PROMOTES INTERGALACTIC VIOLENCE AND\nPERPETUATES THE CAPITALIST ECONOMY\n\nUse WASD key to move and I didn't make an\nend gamescene so play until you die or get bored.", 300, 200);
     }
 
     public void act(){

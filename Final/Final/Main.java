@@ -3,6 +3,7 @@ import java.util.*;
 public class Main extends World
 {
     private Player player = new Player();
+    private int level = 1;
     public Main(){    
         super(1000, 600, 1); 
         prepare();
@@ -15,6 +16,10 @@ public class Main extends World
         prepare();
         prepare();
         act();
+    }
+    
+    public void setLevel(int level){
+        this.level = level;
     }
 
     public void act(){
@@ -50,7 +55,7 @@ public class Main extends World
     }
 
     public void showMoney(){
-        showText(String.format("$%d",player.getMoney()), 100, 100);
+        showText(String.format("Level:%d\n$%d",level,player.getMoney()), 100, 50);
     }
 
     public Player getPlayer(){
